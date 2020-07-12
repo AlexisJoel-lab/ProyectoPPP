@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Public Class CD_Conexion
-    Private Conexion As SqlConnection = New SqlConnection("Server=ALEXIS-PC\SQLEXPRESS;DataBase=DBVENTAS;Integrated Security=true")
+    Private Conexion As SqlConnection = New SqlConnection("Server=DESKTOP-77HMJDO\SQLEXPRESS;DataBase=DBVENTAS;Integrated Security=true")
 
     Public Function AbrirConexion() As SqlConnection
         If Conexion.State = ConnectionState.Closed Then
