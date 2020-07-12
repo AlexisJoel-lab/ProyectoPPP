@@ -36,7 +36,7 @@
             <form action="../../Default.aspx" method="post">
               <h1>Iniciar</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Nombre de Usuario" required="" />
+                <input type="text" class="form-control" placeholder="Usuario" required="" />
               </div>
               <div>
                 <input type="password" class="form-control" placeholder="Contraseña" required="" />
@@ -55,7 +55,7 @@
 
                 <div>
                   <h1><i class="fa fa-paw"></i> Sistema Ventas</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <p>2020</p>
                 </div>
               </div>
             </form>
@@ -91,7 +91,7 @@
 
                 <div>
                   <h1><i class="fa fa-shopping-cart"></i> Sistema ventas</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+                  <p>©2020</p>
                 </div>
               </div>
             </form>
