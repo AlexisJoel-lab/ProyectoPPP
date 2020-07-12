@@ -5,6 +5,140 @@ IF(db_id('dbFerreteria') is not null)
 	CREATE DATABASE dbFerreteria
 GO
 
+use dbFerreteria 
+go
+Create Table Proveedor 
+(	IdProv int identity primary key,
+	RUC char(11) not null unique,
+	Datos varchar(80) not null,
+	Representante varchar(50) null,
+	Telefono varchar(12) null,
+	Direccion varchar(100) not null,
+	E_mail varchar(100) null,
+	Estado char(1) check(Estado in('A','I')) not null
+)
+
+Create Table Marca
+(	IdMarca int identity(1,1) Primary Key,
+	Nombre varchar(50) not null,
+	Estado char(1) not null check(Estado in('A','I'))
+ )
+ go
+ Create Table Categoria
+ (	IdCat int identity(1,1) Primary Key,
+	Descripcion varchar(50) not null,
+	tipo varchar(15) not null )
+ go
+  Create Table Producto
+ (	CodProd char(5) primary key,--Todos los caracteres son digitos
+	IdCat int not null references Categoria  on update cascade,
+	IdMarca int null references marca ,
+	Descripcion varchar(80) not null,
+	PrecioActual smallmoney not null,--Precio actual del producto
+	CodBarra varchar(13) null,
+ )
+ 
+ Create Table Cliente 
+(	IdCliente int identity(1,1) Primary key,
+	Datos varchar (50) not null,
+	DNI varchar(8) null,
+	RUC varchar(11) null,
+	Direccion varchar(100) not null,
+	Telefono varchar(12) not null,
+	Departamento varchar(80) not null,
+	Estado char(1) check(Estado in('E','H')) not null,--E: Eventual		H:Habitual
+)
+go
+Create Table Personal
+(	DNI char(8) primary key,
+	Datos varchar (50) not null,
+	Direccion varchar(100) not null,
+	Telefono varchar(12) not null,
+	e_mail varchar(100) not null,
+	Tipo varchar(20) not null check(tipo in('Administrador','Vendedor','Almacenero')),
+	Estado char(1) check(Estado in('A','I')) not null
+)
+go
+Create Table Usuario
+(	DNI char(8) foreign key references Personal not null,
+	NombreUser varchar(8) not null,
+	Clave varchar(8) not null,
+	Estado char(1) check(Estado in('A','I')) not null
+)
+go
+Alter Table Usuario
+add constraint Pk_Usuario
+Primary key(DNI)
+go
+ create table Comprobante
+(IdComp int identity primary key,
+Tipo varchar(20) not null check(tipo in('Boleta','Factura','Nota de Crédito')),
+Nro_Serie varchar(3) not null,
+Nro varchar(6) not null,
+Estado char(1) not null
+)
+go
+Create Table Pedido_Venta
+(	IdPedVta int identity(1,1) Primary key,	
+	Id_Cliente int foreign key references Cliente on update cascade,	
+	DNI_UserVenta char(8) references Usuario on update cascade,
+	FechaVta smalldatetime not null,
+	DiasPlazoPago int not null,
+	MontoVta smallmoney check (MontoVta>=0) not null,	
+	MontoAbonado smallmoney check (MontoAbonado>=0) not null,	
+	Estado char(1), --check(Estado in('A','P','D','C')) not null,--A:Anulada P:Pagada o cancelada D:Deuda	C: Cambio Mercaderia
+	Porcentaje decimal(2,2) null,
+	IdComp int not null references Comprobante,
+	NroComp varchar(6) not null
+)
+go
+Create Table Detalle_PedidoVenta 
+(	Id_DetVenta int identity(1,1) primary key,
+	CodProd char(5)  references Producto ,
+	Id_PedVenta int foreign key references Pedido_Venta on update cascade,
+	Precio_Venta smallmoney check(Precio_Venta>=0) not null,
+	Cant int check (Cant>=0) not null,
+	Descuento decimal(2,2) null,
+	Estado char(1) check(Estado in('F','A')) not null, --A:Anulada F:Facturada
+	CodMat char(6) null--Solo para el caso de matizados
+)
+go
+
+Create Table Pedido_Compra
+(	IdPedCom int identity(1,1) Primary Key,
+	IdProv int foreign key references Proveedor on update cascade,	
+	FechaPedComp smalldatetime not null,
+	FechaEntrega smalldatetime not null,
+	NroDiasPlazoPago int null,
+	Estado char(1) check(Estado in('E','A','P')) not null,--E: Entregado A:Anulada P:Pendiente
+	DNI_Usercompra char(8) references Usuario on update cascade,
+	Monto_Total money Check(Monto_Total>=0) not null,
+	MontoTransporte money Check(MontoTransporte>=0) null,
+)
+go
+ 
+ Create Table Detalle_Pedido
+(	IdDetPedido int identity(1,1) primary key,
+	Id_Pedido int null foreign key references Pedido_Compra on update cascade,	
+	PrecioPed smallmoney check(PrecioPed>=0) not null,--Precio de Pedido
+	Cantidad int check(Cantidad>=0) not null,
+	CantIng int check(CantIng>=0) not null,	
+	CodProd char(5)  references Producto 
+	
+)
+go
+/***************************************************/
+Create Table Documento_Compra
+(	IdDocComp int identity(1,1) primary key,
+	IdPedido int foreign key references Pedido_Compra on update cascade,
+	Tipo char(1) check(Tipo in('B','F')) not null,--B:Boleta F:Factura
+	NroDocCompra varchar(11) not null,
+	FechaDocComp date not null,
+	--Monto_Total smallmoney Check(Monto_Total>=0) not null,
+	Estado char(1) check(Estado in('A','F')) not null,--A:Anulado F:Facturado
+)
+go
+
 USE dbFerreteria
 
 set ANSI_NULLS ON
