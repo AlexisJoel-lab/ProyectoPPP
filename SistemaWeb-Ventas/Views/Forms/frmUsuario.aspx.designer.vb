@@ -23,65 +23,182 @@ Partial Public Class frmUsuario
     Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control TextBox2.
+    '''Control txtUsuario.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TextBox2 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtUsuario As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control TextBox3.
+    '''Control txtContraseña.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TextBox3 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtContraseña As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control DropDownList2.
+    '''Control TextNombres.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents DropDownList2 As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents TextNombres As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control TextBox5.
+    '''Control TextApePaterno.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TextBox5 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents TextApePaterno As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control TextBox6.
+    '''Control txtApeMaterno.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TextBox6 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtApeMaterno As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control TextBox7.
+    '''Control txtDNI.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TextBox7 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtDNI As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control TextBox8.
+    '''Control TextFecNAc.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TextBox8 As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents TextFecNAc As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control rbtMales.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents rbtMales As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''Control rbtFemale.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents rbtFemale As Global.System.Web.UI.WebControls.RadioButton
+
+    '''<summary>
+    '''Control TextEmail.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents TextEmail As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control TextDireccion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents TextDireccion As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtDepartamento.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtDepartamento As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtProvincia.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtProvincia As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control TextDistrito.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents TextDistrito As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control txtTelefono.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtTelefono As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control cbEstado.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents cbEstado As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''Control btnNuevo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnNuevo As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control btnCancelar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnCancelar As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control btnShowFormUsu.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnShowFormUsu As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control tblUsuarios.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents tblUsuarios As Global.System.Web.UI.WebControls.GridView
 End Class
