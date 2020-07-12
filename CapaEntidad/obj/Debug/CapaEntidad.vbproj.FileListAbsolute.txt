@@ -28,3 +28,13 @@ C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaE
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.xml
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\bin\Debug\CapaEntidad.xml
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.vbprojAssemblyReference.cache
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.Resources.resources
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.vbproj.GenerateResource.cache
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.vbproj.CoreCompileInputs.cache
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.xml
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.pdb
