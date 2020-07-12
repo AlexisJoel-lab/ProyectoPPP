@@ -1,0 +1,1715 @@
+USE master
+GO
+IF(db_id('dbFerreteria') is not null)
+	DROP DATABASE dbFerreteria;
+	CREATE DATABASE dbFerreteria
+GO
+
+USE dbFerreteria
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Proveedor
+-- =============================================
+CREATE PROCEDURE [dbo].[Proveedor_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdProv as int = 0
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Proveedor]
+      WHERE 
+         IdProv = @IdProv
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Proveedor
+-- =============================================
+CREATE PROCEDURE [dbo].[Proveedor_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @RUC as char(11) = ''
+   ,@Datos as varchar(80) = ''
+   ,@Representante as varchar(50) = ''
+   ,@Telefono as varchar(12) = ''
+   ,@Direccion as varchar(100) = ''
+   ,@E_mail as varchar(100) = ''
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Proveedor]
+         (RUC
+         ,Datos
+         ,Representante
+         ,Telefono
+         ,Direccion
+         ,E_mail
+         ,Estado)
+      VALUES
+         (@RUC
+         ,@Datos
+         ,@Representante
+         ,@Telefono
+         ,@Direccion
+         ,@E_mail
+         ,@Estado)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Proveedor
+-- =============================================
+CREATE PROCEDURE [dbo].[Proveedor_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdProv as int = -1
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         IdProv
+         ,RUC
+         ,Datos
+         ,Representante
+         ,Telefono
+         ,Direccion
+         ,E_mail
+         ,Estado
+      FROM [dbo].[Proveedor]
+      WHERE 
+         IdProv LIKE CASE WHEN @IdProv IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @IdProv>=0 THEN CAST(@IdProv AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Proveedor
+-- =============================================
+CREATE PROCEDURE [dbo].[Proveedor_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdProv as int = 0
+   ,@RUC as char(11) = ''
+   ,@Datos as varchar(80) = ''
+   ,@Representante as varchar(50) = ''
+   ,@Telefono as varchar(12) = ''
+   ,@Direccion as varchar(100) = ''
+   ,@E_mail as varchar(100) = ''
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Proveedor]
+      SET 
+         RUC = @RUC
+         ,Datos = @Datos
+         ,Representante = @Representante
+         ,Telefono = @Telefono
+         ,Direccion = @Direccion
+         ,E_mail = @E_mail
+         ,Estado = @Estado
+      WHERE 
+         IdProv = @IdProv
+END
+GO
+
+USE dbFerreteria
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Marca
+-- =============================================
+CREATE PROCEDURE [dbo].[Marca_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdMarca as int = 0
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Marca]
+      WHERE 
+         IdMarca = @IdMarca
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Marca
+-- =============================================
+CREATE PROCEDURE [dbo].[Marca_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @Nombre as varchar(50) = ''
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Marca]
+         (Nombre
+         ,Estado)
+      VALUES
+         (@Nombre
+         ,@Estado)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Marca
+-- =============================================
+CREATE PROCEDURE [dbo].[Marca_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdMarca as int = -1
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         IdMarca
+         ,Nombre
+         ,Estado
+      FROM [dbo].[Marca]
+      WHERE 
+         IdMarca LIKE CASE WHEN @IdMarca IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @IdMarca>=0 THEN CAST(@IdMarca AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Marca
+-- =============================================
+CREATE PROCEDURE [dbo].[Marca_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdMarca as int = 0
+   ,@Nombre as varchar(50) = ''
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Marca]
+      SET 
+         Nombre = @Nombre
+         ,Estado = @Estado
+      WHERE 
+         IdMarca = @IdMarca
+END
+GO
+
+USE dbFerreteria
+
+--      *!*     SQLScript       *!*
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Categoria
+-- =============================================
+CREATE PROCEDURE [dbo].[Categoria_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdCat as int = 0
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Categoria]
+      WHERE 
+         IdCat = @IdCat
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Categoria
+-- =============================================
+CREATE PROCEDURE [dbo].[Categoria_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @Descripcion as varchar(50) = ''
+   ,@tipo as varchar(15) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Categoria]
+         (Descripcion
+         ,tipo)
+      VALUES
+         (@Descripcion
+         ,@tipo)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Categoria
+-- =============================================
+CREATE PROCEDURE [dbo].[Categoria_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdCat as int = -1
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         IdCat
+         ,Descripcion
+         ,tipo
+      FROM [dbo].[Categoria]
+      WHERE 
+         IdCat LIKE CASE WHEN @IdCat IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @IdCat>=0 THEN CAST(@IdCat AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Categoria
+-- =============================================
+CREATE PROCEDURE [dbo].[Categoria_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdCat as int = 0
+   ,@Descripcion as varchar(50) = ''
+   ,@tipo as varchar(15) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Categoria]
+      SET 
+         Descripcion = @Descripcion
+         ,tipo = @tipo
+      WHERE 
+         IdCat = @IdCat
+END
+GO
+
+USE dbFerreteria
+
+--      *!*     SQLScript       *!*
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Producto
+-- =============================================
+CREATE PROCEDURE [dbo].[Producto_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @CodProd as char(5) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Producto]
+      WHERE 
+         CodProd = @CodProd
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Producto
+-- =============================================
+CREATE PROCEDURE [dbo].[Producto_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @CodProd as char(5) = ''
+   ,@IdCat as int = 0
+   ,@IdMarca as int = 0
+   ,@Descripcion as varchar(80) = ''
+   ,@PrecioActual as smallmoney = Null
+   ,@CodBarra as varchar(13) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Producto]
+         (CodProd
+         ,IdCat
+         ,IdMarca
+         ,Descripcion
+         ,PrecioActual
+         ,CodBarra)
+      VALUES
+         (@CodProd
+         ,@IdCat
+         ,@IdMarca
+         ,@Descripcion
+         ,@PrecioActual
+         ,@CodBarra)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Producto
+-- =============================================
+CREATE PROCEDURE [dbo].[Producto_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @CodProd as char(5) = ''
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         CodProd
+         ,IdCat
+         ,IdMarca
+         ,Descripcion
+         ,PrecioActual
+         ,CodBarra
+      FROM [dbo].[Producto]
+      WHERE 
+         CodProd LIKE CASE WHEN @CodProd IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @CodProd>=0 THEN CAST(@CodProd AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Producto
+-- =============================================
+CREATE PROCEDURE [dbo].[Producto_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @CodProd as char(5) = ''
+   ,@IdCat as int = 0
+   ,@IdMarca as int = 0
+   ,@Descripcion as varchar(80) = ''
+   ,@PrecioActual as smallmoney = Null
+   ,@CodBarra as varchar(13) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Producto]
+      SET 
+         IdCat = @IdCat
+         ,IdMarca = @IdMarca
+         ,Descripcion = @Descripcion
+         ,PrecioActual = @PrecioActual
+         ,CodBarra = @CodBarra
+      WHERE 
+         CodProd = @CodProd
+END
+GO
+
+USE dbFerreteria
+
+--      *!*     SQLScript       *!*
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Cliente
+-- =============================================
+CREATE PROCEDURE [dbo].[Cliente_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdCliente as int = 0
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Cliente]
+      WHERE 
+         IdCliente = @IdCliente
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Cliente
+-- =============================================
+CREATE PROCEDURE [dbo].[Cliente_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @Datos as varchar(50) = ''
+   ,@DNI as varchar(8) = ''
+   ,@RUC as varchar(11) = ''
+   ,@Direccion as varchar(100) = ''
+   ,@Telefono as varchar(12) = ''
+   ,@Departamento as varchar(80) = ''
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Cliente]
+         (Datos
+         ,DNI
+         ,RUC
+         ,Direccion
+         ,Telefono
+         ,Departamento
+         ,Estado)
+      VALUES
+         (@Datos
+         ,@DNI
+         ,@RUC
+         ,@Direccion
+         ,@Telefono
+         ,@Departamento
+         ,@Estado)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Cliente
+-- =============================================
+CREATE PROCEDURE [dbo].[Cliente_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdCliente as int = -1
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         IdCliente
+         ,Datos
+         ,DNI
+         ,RUC
+         ,Direccion
+         ,Telefono
+         ,Departamento
+         ,Estado
+      FROM [dbo].[Cliente]
+      WHERE 
+         IdCliente LIKE CASE WHEN @IdCliente IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @IdCliente>=0 THEN CAST(@IdCliente AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Cliente
+-- =============================================
+CREATE PROCEDURE [dbo].[Cliente_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdCliente as int = 0
+   ,@Datos as varchar(50) = ''
+   ,@DNI as varchar(8) = ''
+   ,@RUC as varchar(11) = ''
+   ,@Direccion as varchar(100) = ''
+   ,@Telefono as varchar(12) = ''
+   ,@Departamento as varchar(80) = ''
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Cliente]
+      SET 
+         Datos = @Datos
+         ,DNI = @DNI
+         ,RUC = @RUC
+         ,Direccion = @Direccion
+         ,Telefono = @Telefono
+         ,Departamento = @Departamento
+         ,Estado = @Estado
+      WHERE 
+         IdCliente = @IdCliente
+END
+GO
+
+USE dbFerreteria
+
+--      *!*     SQLScript       *!*
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Personal
+-- =============================================
+CREATE PROCEDURE [dbo].[Personal_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @DNI as char(8) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Personal]
+      WHERE 
+         DNI = @DNI
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Personal
+-- =============================================
+CREATE PROCEDURE [dbo].[Personal_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @DNI as char(8) = ''
+   ,@Datos as varchar(50) = ''
+   ,@Direccion as varchar(100) = ''
+   ,@Telefono as varchar(12) = ''
+   ,@e_mail as varchar(100) = ''
+   ,@Tipo as varchar(20) = ''
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Personal]
+         (DNI
+         ,Datos
+         ,Direccion
+         ,Telefono
+         ,e_mail
+         ,Tipo
+         ,Estado)
+      VALUES
+         (@DNI
+         ,@Datos
+         ,@Direccion
+         ,@Telefono
+         ,@e_mail
+         ,@Tipo
+         ,@Estado)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Personal
+-- =============================================
+CREATE PROCEDURE [dbo].[Personal_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @DNI as char(8) = ''
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         DNI
+         ,Datos
+         ,Direccion
+         ,Telefono
+         ,e_mail
+         ,Tipo
+         ,Estado
+      FROM [dbo].[Personal]
+      WHERE 
+         DNI LIKE CASE WHEN @DNI IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @DNI>=0 THEN CAST(@DNI AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Personal
+-- =============================================
+CREATE PROCEDURE [dbo].[Personal_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @DNI as char(8) = ''
+   ,@Datos as varchar(50) = ''
+   ,@Direccion as varchar(100) = ''
+   ,@Telefono as varchar(12) = ''
+   ,@e_mail as varchar(100) = ''
+   ,@Tipo as varchar(20) = ''
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Personal]
+      SET 
+         Datos = @Datos
+         ,Direccion = @Direccion
+         ,Telefono = @Telefono
+         ,e_mail = @e_mail
+         ,Tipo = @Tipo
+         ,Estado = @Estado
+      WHERE 
+         DNI = @DNI
+END
+GO
+
+USE dbFerreteria
+
+--      *!*     SQLScript       *!*
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Usuario
+-- =============================================
+CREATE PROCEDURE [dbo].[Usuario_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @DNI as char(8) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Usuario]
+      WHERE 
+         DNI = @DNI
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Usuario
+-- =============================================
+CREATE PROCEDURE [dbo].[Usuario_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @DNI as char(8) = ''
+   ,@NombreUser as varchar(8) = ''
+   ,@Clave as varchar(8) = ''
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Usuario]
+         (DNI
+         ,NombreUser
+         ,Clave
+         ,Estado)
+      VALUES
+         (@DNI
+         ,@NombreUser
+         ,@Clave
+         ,@Estado)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Usuario
+-- =============================================
+CREATE PROCEDURE [dbo].[Usuario_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @DNI as char(8) = ''
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         DNI
+         ,NombreUser
+         ,Clave
+         ,Estado
+      FROM [dbo].[Usuario]
+      WHERE 
+         DNI LIKE CASE WHEN @DNI IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @DNI>=0 THEN CAST(@DNI AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Usuario
+-- =============================================
+CREATE PROCEDURE [dbo].[Usuario_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @DNI as char(8) = ''
+   ,@NombreUser as varchar(8) = ''
+   ,@Clave as varchar(8) = ''
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Usuario]
+      SET 
+         NombreUser = @NombreUser
+         ,Clave = @Clave
+         ,Estado = @Estado
+      WHERE 
+         DNI = @DNI
+END
+GO
+
+USE dbFerreteria
+
+--      *!*     SQLScript       *!*
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Comprobante
+-- =============================================
+CREATE PROCEDURE [dbo].[Comprobante_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdComp as int = 0
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Comprobante]
+      WHERE 
+         IdComp = @IdComp
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Comprobante
+-- =============================================
+CREATE PROCEDURE [dbo].[Comprobante_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @Tipo as varchar(20) = ''
+   ,@Nro_Serie as varchar(3) = ''
+   ,@Nro as varchar(6) = ''
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Comprobante]
+         (Tipo
+         ,Nro_Serie
+         ,Nro
+         ,Estado)
+      VALUES
+         (@Tipo
+         ,@Nro_Serie
+         ,@Nro
+         ,@Estado)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Comprobante
+-- =============================================
+CREATE PROCEDURE [dbo].[Comprobante_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdComp as int = -1
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         IdComp
+         ,Tipo
+         ,Nro_Serie
+         ,Nro
+         ,Estado
+      FROM [dbo].[Comprobante]
+      WHERE 
+         IdComp LIKE CASE WHEN @IdComp IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @IdComp>=0 THEN CAST(@IdComp AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Comprobante
+-- =============================================
+CREATE PROCEDURE [dbo].[Comprobante_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdComp as int = 0
+   ,@Tipo as varchar(20) = ''
+   ,@Nro_Serie as varchar(3) = ''
+   ,@Nro as varchar(6) = ''
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Comprobante]
+      SET 
+         Tipo = @Tipo
+         ,Nro_Serie = @Nro_Serie
+         ,Nro = @Nro
+         ,Estado = @Estado
+      WHERE 
+         IdComp = @IdComp
+END
+GO
+
+USE dbFerreteria
+
+--      *!*     SQLScript       *!*
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Pedido_Venta
+-- =============================================
+CREATE PROCEDURE [dbo].[Pedido_Venta_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdPedVta as int = 0
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Pedido_Venta]
+      WHERE 
+         IdPedVta = @IdPedVta
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Pedido_Venta
+-- =============================================
+CREATE PROCEDURE [dbo].[Pedido_Venta_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @Id_Cliente as int = 0
+   ,@DNI_UserVenta as char(8) = ''
+   ,@FechaVta as smalldatetime = Null
+   ,@DiasPlazoPago as int = 0
+   ,@MontoVta as smallmoney = Null
+   ,@MontoAbonado as smallmoney = Null
+   ,@Estado as char(1) = ''
+   ,@Porcentaje as decimal(2,2) = Null
+   ,@IdComp as int = 0
+   ,@NroComp as varchar(6) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Pedido_Venta]
+         (Id_Cliente
+         ,DNI_UserVenta
+         ,FechaVta
+         ,DiasPlazoPago
+         ,MontoVta
+         ,MontoAbonado
+         ,Estado
+         ,Porcentaje
+         ,IdComp
+         ,NroComp)
+      VALUES
+         (@Id_Cliente
+         ,@DNI_UserVenta
+         ,@FechaVta
+         ,@DiasPlazoPago
+         ,@MontoVta
+         ,@MontoAbonado
+         ,@Estado
+         ,@Porcentaje
+         ,@IdComp
+         ,@NroComp)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Pedido_Venta
+-- =============================================
+CREATE PROCEDURE [dbo].[Pedido_Venta_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdPedVta as int = -1
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         IdPedVta
+         ,Id_Cliente
+         ,DNI_UserVenta
+         ,FechaVta
+         ,DiasPlazoPago
+         ,MontoVta
+         ,MontoAbonado
+         ,Estado
+         ,Porcentaje
+         ,IdComp
+         ,NroComp
+      FROM [dbo].[Pedido_Venta]
+      WHERE 
+         IdPedVta LIKE CASE WHEN @IdPedVta IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @IdPedVta>=0 THEN CAST(@IdPedVta AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Pedido_Venta
+-- =============================================
+CREATE PROCEDURE [dbo].[Pedido_Venta_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdPedVta as int = 0
+   ,@Id_Cliente as int = 0
+   ,@DNI_UserVenta as char(8) = ''
+   ,@FechaVta as smalldatetime = Null
+   ,@DiasPlazoPago as int = 0
+   ,@MontoVta as smallmoney = Null
+   ,@MontoAbonado as smallmoney = Null
+   ,@Estado as char(1) = ''
+   ,@Porcentaje as decimal(2,2) = Null
+   ,@IdComp as int = 0
+   ,@NroComp as varchar(6) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Pedido_Venta]
+      SET 
+         Id_Cliente = @Id_Cliente
+         ,DNI_UserVenta = @DNI_UserVenta
+         ,FechaVta = @FechaVta
+         ,DiasPlazoPago = @DiasPlazoPago
+         ,MontoVta = @MontoVta
+         ,MontoAbonado = @MontoAbonado
+         ,Estado = @Estado
+         ,Porcentaje = @Porcentaje
+         ,IdComp = @IdComp
+         ,NroComp = @NroComp
+      WHERE 
+         IdPedVta = @IdPedVta
+END
+GO
+
+USE dbFerreteria
+
+--      *!*     SQLScript       *!*
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Detalle_PedidoVenta
+-- =============================================
+CREATE PROCEDURE [dbo].[Detalle_PedidoVenta_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @Id_DetVenta as int = 0
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Detalle_PedidoVenta]
+      WHERE 
+         Id_DetVenta = @Id_DetVenta
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Detalle_PedidoVenta
+-- =============================================
+CREATE PROCEDURE [dbo].[Detalle_PedidoVenta_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @CodProd as char(5) = ''
+   ,@Id_PedVenta as int = 0
+   ,@Precio_Venta as smallmoney = Null
+   ,@Cant as int = 0
+   ,@Descuento as decimal(2,2) = Null
+   ,@Estado as char(1) = ''
+   ,@CodMat as char(6) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Detalle_PedidoVenta]
+         (CodProd
+         ,Id_PedVenta
+         ,Precio_Venta
+         ,Cant
+         ,Descuento
+         ,Estado
+         ,CodMat)
+      VALUES
+         (@CodProd
+         ,@Id_PedVenta
+         ,@Precio_Venta
+         ,@Cant
+         ,@Descuento
+         ,@Estado
+         ,@CodMat)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Detalle_PedidoVenta
+-- =============================================
+CREATE PROCEDURE [dbo].[Detalle_PedidoVenta_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @Id_DetVenta as int = -1
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         Id_DetVenta
+         ,CodProd
+         ,Id_PedVenta
+         ,Precio_Venta
+         ,Cant
+         ,Descuento
+         ,Estado
+         ,CodMat
+      FROM [dbo].[Detalle_PedidoVenta]
+      WHERE 
+         Id_DetVenta LIKE CASE WHEN @Id_DetVenta IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @Id_DetVenta>=0 THEN CAST(@Id_DetVenta AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Detalle_PedidoVenta
+-- =============================================
+CREATE PROCEDURE [dbo].[Detalle_PedidoVenta_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @Id_DetVenta as int = 0
+   ,@CodProd as char(5) = ''
+   ,@Id_PedVenta as int = 0
+   ,@Precio_Venta as smallmoney = Null
+   ,@Cant as int = 0
+   ,@Descuento as decimal(2,2) = Null
+   ,@Estado as char(1) = ''
+   ,@CodMat as char(6) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Detalle_PedidoVenta]
+      SET 
+         CodProd = @CodProd
+         ,Id_PedVenta = @Id_PedVenta
+         ,Precio_Venta = @Precio_Venta
+         ,Cant = @Cant
+         ,Descuento = @Descuento
+         ,Estado = @Estado
+         ,CodMat = @CodMat
+      WHERE 
+         Id_DetVenta = @Id_DetVenta
+END
+GO
+
+USE dbFerreteria
+
+--      *!*     SQLScript       *!*
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Pedido_Compra
+-- =============================================
+CREATE PROCEDURE [dbo].[Pedido_Compra_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdPedCom as int = 0
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Pedido_Compra]
+      WHERE 
+         IdPedCom = @IdPedCom
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Pedido_Compra
+-- =============================================
+CREATE PROCEDURE [dbo].[Pedido_Compra_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdProv as int = 0
+   ,@TipoCompra as varchar(8) = ''
+   ,@FechaPedComp as smalldatetime = Null
+   ,@FechaEntrega as smalldatetime = Null
+   ,@NroDiasPlazoPago as int = 0
+   ,@Estado as char(1) = ''
+   ,@DNI_Usercompra as char(8) = ''
+   ,@Monto_Total as money = Null
+   ,@MontoTransporte as money = Null
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Pedido_Compra]
+         (IdProv
+         ,TipoCompra
+         ,FechaPedComp
+         ,FechaEntrega
+         ,NroDiasPlazoPago
+         ,Estado
+         ,DNI_Usercompra
+         ,Monto_Total
+         ,MontoTransporte)
+      VALUES
+         (@IdProv
+         ,@TipoCompra
+         ,@FechaPedComp
+         ,@FechaEntrega
+         ,@NroDiasPlazoPago
+         ,@Estado
+         ,@DNI_Usercompra
+         ,@Monto_Total
+         ,@MontoTransporte)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Pedido_Compra
+-- =============================================
+CREATE PROCEDURE [dbo].[Pedido_Compra_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdPedCom as int = -1
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         IdPedCom
+         ,IdProv
+         ,TipoCompra
+         ,FechaPedComp
+         ,FechaEntrega
+         ,NroDiasPlazoPago
+         ,Estado
+         ,DNI_Usercompra
+         ,Monto_Total
+         ,MontoTransporte
+      FROM [dbo].[Pedido_Compra]
+      WHERE 
+         IdPedCom LIKE CASE WHEN @IdPedCom IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @IdPedCom>=0 THEN CAST(@IdPedCom AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Pedido_Compra
+-- =============================================
+CREATE PROCEDURE [dbo].[Pedido_Compra_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdPedCom as int = 0
+   ,@IdProv as int = 0
+   ,@TipoCompra as varchar(8) = ''
+   ,@FechaPedComp as smalldatetime = Null
+   ,@FechaEntrega as smalldatetime = Null
+   ,@NroDiasPlazoPago as int = 0
+   ,@Estado as char(1) = ''
+   ,@DNI_Usercompra as char(8) = ''
+   ,@Monto_Total as money = Null
+   ,@MontoTransporte as money = Null
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Pedido_Compra]
+      SET 
+         IdProv = @IdProv
+         ,TipoCompra = @TipoCompra
+         ,FechaPedComp = @FechaPedComp
+         ,FechaEntrega = @FechaEntrega
+         ,NroDiasPlazoPago = @NroDiasPlazoPago
+         ,Estado = @Estado
+         ,DNI_Usercompra = @DNI_Usercompra
+         ,Monto_Total = @Monto_Total
+         ,MontoTransporte = @MontoTransporte
+      WHERE 
+         IdPedCom = @IdPedCom
+END
+GO
+
+USE dbFerreteria
+
+--      *!*     SQLScript       *!*
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Detalle_Pedido
+-- =============================================
+CREATE PROCEDURE [dbo].[Detalle_Pedido_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdDetPedido as int = 0
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Detalle_Pedido]
+      WHERE 
+         IdDetPedido = @IdDetPedido
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Detalle_Pedido
+-- =============================================
+CREATE PROCEDURE [dbo].[Detalle_Pedido_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @Id_Pedido as int = 0
+   ,@PrecioPed as smallmoney = Null
+   ,@Cantidad as int = 0
+   ,@CantIng as int = 0
+   ,@CodProd as char(5) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Detalle_Pedido]
+         (Id_Pedido
+         ,PrecioPed
+         ,Cantidad
+         ,CantIng
+         ,CodProd)
+      VALUES
+         (@Id_Pedido
+         ,@PrecioPed
+         ,@Cantidad
+         ,@CantIng
+         ,@CodProd)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Detalle_Pedido
+-- =============================================
+CREATE PROCEDURE [dbo].[Detalle_Pedido_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdDetPedido as int = -1
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         IdDetPedido
+         ,Id_Pedido
+         ,PrecioPed
+         ,Cantidad
+         ,CantIng
+         ,CodProd
+      FROM [dbo].[Detalle_Pedido]
+      WHERE 
+         IdDetPedido LIKE CASE WHEN @IdDetPedido IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @IdDetPedido>=0 THEN CAST(@IdDetPedido AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Detalle_Pedido
+-- =============================================
+CREATE PROCEDURE [dbo].[Detalle_Pedido_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdDetPedido as int = 0
+   ,@Id_Pedido as int = 0
+   ,@PrecioPed as smallmoney = Null
+   ,@Cantidad as int = 0
+   ,@CantIng as int = 0
+   ,@CodProd as char(5) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Detalle_Pedido]
+      SET 
+         Id_Pedido = @Id_Pedido
+         ,PrecioPed = @PrecioPed
+         ,Cantidad = @Cantidad
+         ,CantIng = @CantIng
+         ,CodProd = @CodProd
+      WHERE 
+         IdDetPedido = @IdDetPedido
+END
+GO
+
+USE dbFerreteria
+
+--      *!*     SQLScript       *!*
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete Documento_Compra
+-- =============================================
+CREATE PROCEDURE [dbo].[Documento_Compra_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdDocComp as int = 0
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[Documento_Compra]
+      WHERE 
+         IdDocComp = @IdDocComp
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert Documento_Compra
+-- =============================================
+CREATE PROCEDURE [dbo].[Documento_Compra_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdPedido as int = 0
+   ,@Tipo as char(1) = ''
+   ,@NroDocCompra as varchar(11) = ''
+   ,@FechaDocComp as date = Null
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[Documento_Compra]
+         (IdPedido
+         ,Tipo
+         ,NroDocCompra
+         ,FechaDocComp
+         ,Estado)
+      VALUES
+         (@IdPedido
+         ,@Tipo
+         ,@NroDocCompra
+         ,@FechaDocComp
+         ,@Estado)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select Documento_Compra
+-- =============================================
+CREATE PROCEDURE [dbo].[Documento_Compra_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdDocComp as int = -1
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         IdDocComp
+         ,IdPedido
+         ,Tipo
+         ,NroDocCompra
+         ,FechaDocComp
+         ,Estado
+      FROM [dbo].[Documento_Compra]
+      WHERE 
+         IdDocComp LIKE CASE WHEN @IdDocComp IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @IdDocComp>=0 THEN CAST(@IdDocComp AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update Documento_Compra
+-- =============================================
+CREATE PROCEDURE [dbo].[Documento_Compra_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @IdDocComp as int = 0
+   ,@IdPedido as int = 0
+   ,@Tipo as char(1) = ''
+   ,@NroDocCompra as varchar(11) = ''
+   ,@FechaDocComp as date = Null
+   ,@Estado as char(1) = ''
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[Documento_Compra]
+      SET 
+         IdPedido = @IdPedido
+         ,Tipo = @Tipo
+         ,NroDocCompra = @NroDocCompra
+         ,FechaDocComp = @FechaDocComp
+         ,Estado = @Estado
+      WHERE 
+         IdDocComp = @IdDocComp
+END
+GO
+
+USE dbFerreteria
+
+--      *!*     SQLScript       *!*
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Delete sysdiagrams
+-- =============================================
+CREATE PROCEDURE [dbo].[sysdiagrams_Del]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @diagram_id as int = 0
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   DELETE FROM [dbo].[sysdiagrams]
+      WHERE 
+         diagram_id = @diagram_id
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Insert sysdiagrams
+-- =============================================
+CREATE PROCEDURE [dbo].[sysdiagrams_Ins]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @name as sysname = Null
+   ,@principal_id as int = 0
+   ,@version as int = 0
+   ,@definition as image = Null
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   INSERT [dbo].[sysdiagrams]
+         (name
+         ,principal_id
+         ,version
+         ,definition)
+      VALUES
+         (@name
+         ,@principal_id
+         ,@version
+         ,@definition)
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Select sysdiagrams
+-- =============================================
+CREATE PROCEDURE [dbo].[sysdiagrams_Sel]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @diagram_id as int = -1
+
+AS
+BEGIN
+   -- SET NOCOUNT ON Agregado para prevenir a los resultados extras
+   -- interferir con las declaraciones SELECT
+   SET NOCOUNT ON;
+   -- Inserte declaraciones para el Procedimiento aquí
+   SELECT 
+         name
+         ,principal_id
+         ,diagram_id
+         ,version
+         ,definition
+      FROM [dbo].[sysdiagrams]
+      WHERE 
+         diagram_id LIKE CASE WHEN @diagram_id IS NULL THEN CAST((SELECT @@IDENTITY) AS Varchar(20))
+               ELSE
+                  CASE WHEN @diagram_id>=0 THEN CAST(@diagram_id AS Varchar(20))
+                  ELSE '%'
+                  END
+               END
+END
+GO
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+
+-- =============================================
+-- Descripción: Update sysdiagrams
+-- =============================================
+CREATE PROCEDURE [dbo].[sysdiagrams_Upd]
+   -- Agregue los parámetros para el Procedimiento Almacenado aquí
+   @name as sysname = Null
+   ,@principal_id as int = 0
+   ,@diagram_id as int = 0
+   ,@version as int = 0
+   ,@definition as image = Null
+AS
+BEGIN
+   -- Inserte declaraciones para el Procedimiento aquí
+   UPDATE [dbo].[sysdiagrams]
+      SET 
+         name = @name
+         ,principal_id = @principal_id
+         ,version = @version
+         ,definition = @definition
+      WHERE 
+         diagram_id = @diagram_id
+END
+GO
