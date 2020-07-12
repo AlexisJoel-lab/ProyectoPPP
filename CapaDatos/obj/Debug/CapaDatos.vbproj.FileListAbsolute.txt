@@ -40,3 +40,17 @@ C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaDatos\obj\Debug\CapaDat
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaDatos\obj\Debug\CapaDatos.xml
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\bin\Debug\CapaDatos.xml
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\bin\Debug\CapaEntidad.xml
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\obj\Debug\CapaDatos.vbprojAssemblyReference.cache
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\obj\Debug\CapaDatos.Resources.resources
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\obj\Debug\CapaDatos.vbproj.GenerateResource.cache
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\obj\Debug\CapaDatos.vbproj.CoreCompileInputs.cache
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\obj\Debug\CapaDatos.vbproj.CopyComplete
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\obj\Debug\CapaDatos.xml
+C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaDatos\obj\Debug\CapaDatos.pdb
