@@ -25,7 +25,7 @@
                   <div class="x_content">
                       <%--<form class="form-horizontal form-label-left" method="post" action="#" runat="server">--%>
                         <div class="field item form-group">
-                      <label class="col-form-label col-md-3 col-sm-3  label-align">Marca<span
+                      <label class="col-form-label col-md-3 col-sm-3  label-align">Categoría<span
                           class="required">*</span></label>
                       <div class="col-md-6 col-sm-6">
                           <asp:TextBox ID="txtCategoria" runat="server" CssClass="form-control" TabIndex="1" required="required"></asp:TextBox>
@@ -48,7 +48,7 @@
               <div class="col-md-12 col-sm-12  ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Listado de marcas</h2>
+                    <h2>Listado de categoría</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -56,18 +56,23 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">                      
-                      <asp:Button ID="btnShowFormCli" runat="server" Height="36px" Text="Nueva Categoría" TabIndex="4" CssClass="btn btn-primary" />
-                      <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Categoría</th>
-                                <th scope="col">Opción</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
+                      <asp:Button ID="btnShowFormCat" runat="server" Height="36px" Text="Nueva Marca" TabIndex="4" CssClass="btn btn-primary" />
+                            <asp:GridView ID="tblCategoria" runat="server" CssClass="table" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" ShowHeaderWhenEmpty="True" AutoGenerateColumns="False">
+                                <AlternatingRowStyle BackColor="#CCCCCC" />
+                                <Columns>
+                                    <asp:TemplateField HeaderText="CODIGO"></asp:TemplateField>
+                                    <asp:TemplateField HeaderText="CATEGORÍA"></asp:TemplateField>
+                                    <asp:TemplateField HeaderText="FECHA DE REGISTRO"></asp:TemplateField>
+                                    <asp:CommandField ButtonType="Button" HeaderText="Opciones" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" ControlStyle-CssClass="btn-info" />
+                                </Columns>                                
+                                <HeaderStyle BackColor="Black" CssClass="thead-dark" Font-Bold="True" ForeColor="White" />
+                                <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+                                <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+                                <SortedAscendingCellStyle BackColor="#F1F1F1" />
+                                <SortedAscendingHeaderStyle BackColor="#808080" />
+                                <SortedDescendingCellStyle BackColor="#CAC9C9" />
+                                <SortedDescendingHeaderStyle BackColor="#383838" />
+                            </asp:GridView>
                   </div>                    
                 </div>
               </div>

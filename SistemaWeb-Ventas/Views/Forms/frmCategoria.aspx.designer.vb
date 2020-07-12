@@ -41,11 +41,20 @@ Partial Public Class frmCategoria
     Protected WithEvents btnCancelar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control btnShowFormCli.
+    '''Control btnShowFormCat.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnShowFormCli As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnShowFormCat As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control tblCategoria.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents tblCategoria As Global.System.Web.UI.WebControls.GridView
 End Class
