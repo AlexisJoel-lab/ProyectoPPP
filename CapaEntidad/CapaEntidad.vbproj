@@ -64,17 +64,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\CE_ActiveUser.vb" />
     <Compile Include="CE_Categoria.vb" />
     <Compile Include="CE_Cliente.vb" />
-    <Compile Include="CE_DetalleCompra.vb" />
     <Compile Include="CE_Detalle_Ingreso.vb" />
     <Compile Include="CE_Detalle_Venta.vb" />
     <Compile Include="CE_Ingreso.vb" />
     <Compile Include="CE_Marca.vb" />
-    <Compile Include="CE_PedidoCompra.vb" />
     <Compile Include="CE_Persona.vb" />
     <Compile Include="CE_Producto.vb" />
-    <Compile Include="CE_Proveedor.vb" />
     <Compile Include="CE_Rol.vb" />
     <Compile Include="CE_Usuario.vb" />
     <Compile Include="CE_Venta.vb" />

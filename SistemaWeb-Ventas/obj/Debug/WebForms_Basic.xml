@@ -73,9 +73,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmCategoria._btnShowFormCli">
+<member name="F:SistemaWeb_Ventas.frmCategoria._btnShowFormCat">
 <summary>
-Control btnShowFormCli.
+Control btnShowFormCat.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmCategoria._tblCategoria">
+<summary>
+Control tblCategoria.
 </summary>
 <remarks>
 Campo generado automáticamente.

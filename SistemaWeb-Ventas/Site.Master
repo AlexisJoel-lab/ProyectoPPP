@@ -12,7 +12,7 @@
     <%--<asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>--%>
-    <%--<webopt:bundlereference runat="server" path="~/Content/css" />--%>
+   
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     
     <!-- Bootstrap -->
@@ -125,7 +125,7 @@
                           <li><a><i class="fa fa-gears"></i> Mantenimiento <span class="fa fa-chevron-down"></span></a>
                             <ul class="nav child_menu">
                               <li><a runat="server" href="~/Views/Forms/frmMarca.aspx">Marca</a></li>
-                              <li><a runat="server" href="#">Categorias</a></li>
+                              <li><a runat="server" href="~/Views/Forms/frmCategoria.aspx">Categorias</a></li>
                               <li><a runat="server" href="#">Productos</a></li>
                               <li><a runat="server" href="#">Roles</a></li>
                               <li><a runat="server" href="#">Modulos</a></li>
