@@ -37,6 +37,33 @@ SistemaWeb-Ventas
  Devuelve el objeto de registro Asp.
  </summary>
 </member>
+<member name="F:SistemaWeb_Ventas.Login1._txtUser">
+<summary>
+Control txtUser.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.Login1._txtPass">
+<summary>
+Control txtPass.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.Login1._btnLogin">
+<summary>
+Control btnLogin.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:SistemaWeb_Ventas.frmCategoria._txtCategoria">
 <summary>
 Control txtCategoria.
@@ -544,6 +571,24 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:SistemaWeb_Ventas.frmVenta._TextBox7">
 <summary>
 Control TextBox7.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.SiteMaster._lblUserName">
+<summary>
+Control lblUserName.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.SiteMaster._lblUserName2">
+<summary>
+Control lblUserName2.
 </summary>
 <remarks>
 Campo generado automáticamente.

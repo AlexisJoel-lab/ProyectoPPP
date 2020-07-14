@@ -8,16 +8,6 @@ C:\Users\ALEXIS\source\repos\SistemaWeb-Ventas\CapaEntidad\obj\Debug\CapaEntidad
 C:\Users\ALEXIS\source\repos\SistemaWeb-Ventas\CapaEntidad\obj\Debug\CapaEntidad.xml
 C:\Users\ALEXIS\source\repos\SistemaWeb-Ventas\CapaEntidad\obj\Debug\CapaEntidad.pdb
 C:\Users\ALEXIS\source\repos\SistemaWeb-Ventas\CapaEntidad\obj\Debug\CapaEntidad.vbprojAssemblyReference.cache
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\bin\Debug\CapaEntidad.dll
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\bin\Debug\CapaEntidad.pdb
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\bin\Debug\CapaEntidad.xml
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.vbprojAssemblyReference.cache
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.Resources.resources
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.vbproj.GenerateResource.cache
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.vbproj.CoreCompileInputs.cache
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.dll
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.xml
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.pdb
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaEntidad\bin\Debug\CapaEntidad.dll
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaEntidad\bin\Debug\CapaEntidad.pdb
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaEntidad\bin\Debug\CapaEntidad.xml
@@ -38,3 +28,13 @@ C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\obj\Debug\Cap
 C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.xml
 C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\bin\Debug\CapaEntidad.xml
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.vbprojAssemblyReference.cache
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.Resources.resources
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.vbproj.GenerateResource.cache
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.vbproj.CoreCompileInputs.cache
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.xml
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaEntidad\obj\Debug\CapaEntidad.pdb

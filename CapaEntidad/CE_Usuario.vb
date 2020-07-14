@@ -1,7 +1,8 @@
 ﻿Public Class CE_Usuario
 #Region "CAMPOS"
     Private _ID_USUARIO As Integer
-    Private _FK_ID_ROL As CE_Rol
+    Private _CODIGO As String
+    Private _FK_ID_ROL As String
     Private _USUARIO As String
     Private _CONTRASEÑA As String
     Private _NOMBRE As String
@@ -9,7 +10,7 @@
     Private _APE_MATERNO As String
     Private _DNI As String
     Private _FECHA_NAC As Date
-    Private _GENERO As Integer
+    Private _GENERO As String
     Private _EMAIL As String
     Private _DIRECCION As String
     Private _DEPARTAMENTO As String
@@ -33,12 +34,21 @@
         End Set
     End Property
 
-    Public Property FK_ID_ROL As CE_Rol
+    Public Property FK_ID_ROL As String
         Get
             Return _FK_ID_ROL
         End Get
-        Set(value As CE_Rol)
+        Set(value As String)
             _FK_ID_ROL = value
+        End Set
+    End Property
+
+    Public Property CODIGO As String
+        Get
+            Return _CODIGO
+        End Get
+        Set(value As String)
+            _CODIGO = value
         End Set
     End Property
 
@@ -105,11 +115,11 @@
         End Set
     End Property
 
-    Public Property GENERO As Integer
+    Public Property GENERO As String
         Get
             Return _GENERO
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _GENERO = value
         End Set
     End Property
@@ -221,18 +231,18 @@
             _FECHA_DEL = value
         End Set
     End Property
-
 #End Region
     Public Sub New()
     End Sub
 
-    Public Sub New(ID_USUARIO As Integer, FK_ID_ROL As CE_Rol, USUARIO As String, CONTRASEÑA As String,
+    Public Sub New(ID_USUARIO As Integer, CODIGO As String, FK_ID_ROL As String, USUARIO As String, CONTRASEÑA As String,
                    NOMBRE As String, APE_PATERNO As String, APE_MATERNO As String, DNI As String,
-                   FECHA_NAC As Date, GENERO As Integer, EMAIL As String, DIRECCION As String,
+                   FECHA_NAC As Date, GENERO As String, EMAIL As String, DIRECCION As String,
                    DEPARTAMENTO As String, PROVINCIA As String, DISTRITO As String, TELEFONO As String,
                    FOTO As Byte, ESTADO As String, ELIM_LOGICO As Integer, FECHA_INS As Date, FECHA_UPD As Date,
                    FECHA_DEL As Date)
         _ID_USUARIO = ID_USUARIO
+        _CODIGO = CODIGO
         _FK_ID_ROL = FK_ID_ROL
         _USUARIO = USUARIO
         _CONTRASEÑA = CONTRASEÑA

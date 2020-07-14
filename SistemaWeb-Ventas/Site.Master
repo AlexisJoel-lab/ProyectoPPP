@@ -9,22 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Sistema ventas</title>
 
-    <%--<asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>--%>
+    <asp:PlaceHolder runat="server">
+    </asp:PlaceHolder>
    
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     
     <!-- Bootstrap -->
-    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Scripts/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" runat="server">
     <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" runat="server"/>
+    <link href="Scripts/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" runat="server"/>
     <!-- bootstrap-progressbar -->
-    <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" runat="server"/>
+    <link href="Scripts/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" runat="server"/>
     <!-- JQVMap -->
-    <link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-
-    <link href="build/css/custom.min.css" rel="stylesheet" runat="server" />
+    <link href="Scripts/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet" runat="server"/>
+    
+    <link href="Scripts/build/css/custom.min.css" rel="stylesheet" runat="server"/>
 </head>
 <body class="nav-md">
     <form runat="server">
@@ -32,7 +31,7 @@
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
-                <%--<asp:ScriptReference Name="MsAjaxBundle" />
+                <%--<asp:ScriptReference Name="MsAjaxBundle" />                
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
@@ -48,48 +47,12 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <%--<div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">SISTEMA VENTAS</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Inicio</a></li>
-                        <li><a runat="server" href="~/About">Acerca de</a></li>
-                        <li><a runat="server" href="~/Contact">Contacto</a></li>
-                        <li><a runat="server" href="~/Cliente">Cliente</a></li>
-                    </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Registrarse</a></li>
-                                <li><a runat="server" href="~/Account/Login">Iniciar sesión</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                </div>
-            </div>
-        </div>--%>
         <div class="container body">
             <div class="main_container">
                 <div class="col-md-3 left_col">
                   <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                        <a runat="server" href="cc" class="site_title"><i class="fa fa-shopping-cart"></i> <span>Sistema Ventas</span></a>
+                        <a runat="server" href="~/" class="site_title"><i class="fa fa-shopping-cart"></i> <span>Sistema Ventas</span></a>
                     </div>
 
                     <div class="clearfix"></div>
@@ -101,7 +64,7 @@
                       </div>
                       <div class="profile_info">
                         <span>Bienvenido,</span>
-                        <h2>Admin</h2>
+                        <h2><asp:Label ID="lblUserName" runat="server" Text=""></asp:Label></h2>
                       </div>
                     </div>
                     <!-- /menu profile quick info -->
@@ -161,7 +124,7 @@
                       <a runat="server" data-toggle="tooltip" data-placement="top" title="Lock" href="~/">
                         <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
                       </a>
-                      <a runat="server" data-toggle="tooltip" data-placement="top" title="Logout" href="~/Account/Login">
+                      <a runat="server" data-toggle="tooltip" data-placement="top" title="Logout" href="~/Views/Account/Login">
                         <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                       </a>
                     </div>
@@ -179,7 +142,7 @@
                           <ul class=" navbar-right">
                             <li class="nav-item dropdown open" style="padding-left: 15px;">
                               <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                                <img src="images/user.png" alt="">Admmin
+                                <img src="images/user.png" alt=""><asp:Label ID="lblUserName2" runat="server" Text=""></asp:Label>
                               </a>
                               <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item"  href="javascript:;"> Perfil</a>
@@ -188,7 +151,7 @@
                                     <span>Configuración</span>
                                   </a>
                               <a class="dropdown-item"  href="javascript:;">Ayuda</a>
-                                <a runat="server" href="~/Account/Login" class="dropdown-item"><i class="fa fa-sign-out pull-right"></i> Cerrar Sesión</a>
+                                <a runat="server" href="~/Views/Account/Login" class="dropdown-item"><i class="fa fa-sign-out pull-right"></i> Cerrar Sesión</a>
                               </div>
                             </li>                        
                           </ul>                    
@@ -208,38 +171,38 @@
             </div>
         </div>
     </form>
-    
     <!-- jQuery -->
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
-     <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/Scripts/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <script src="~/Scripts/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
+    <script src="~/Scripts/vendors/nprogress/nprogress.js"></script>
     <!-- Chart.js -->
-    <script src="vendors/Chart.js/dist/Chart.min.js"></script>
+    <script src="~/Scripts/vendors/Chart.js/dist/Chart.min.js"></script>
      <!-- gauge.js -->
-    <script src="vendors/gauge.js/dist/gauge.min.js"></script>
+    <script src="~/Scripts/vendors/gauge.js/dist/gauge.min.js"></script>
     <!-- bootstrap-progressbar -->
-    <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="~/Scripts/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- Flot -->
-    <script src="vendors/Flot/jquery.flot.js"></script>
-    <script src="vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="vendors/Flot/jquery.flot.time.js"></script>
-    <script src="vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="vendors/Flot/jquery.flot.resize.js"></script>
+    <script src="~/Scripts/vendors/Flot/jquery.flot.js"></script>
+    <script src="~/Scripts/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="~/Scripts/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="~/Scripts/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="~/Scripts/vendors/Flot/jquery.flot.resize.js"></script>
     <!-- Flot plugins -->
-    <script src="vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+    <script src="~/Scripts/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="~/Scripts/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="~/Scripts/vendors/flot.curvedlines/curvedLines.js"></script>
     <!-- DateJS -->
-    <script src="vendors/DateJS/build/date.js"></script>
+    <script src="~/Scripts/vendors/DateJS/build/date.js"></script>
     <!-- JQVMap -->
-    <script src="vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="~/Scripts/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="~/Scripts/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="~/Scripts/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>--%>
     <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
+    <script src="~/Scripts/build/js/custom.min.js"></script>
+        
 </body>
 </html>

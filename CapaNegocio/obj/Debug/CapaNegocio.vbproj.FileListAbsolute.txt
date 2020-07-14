@@ -15,23 +15,6 @@ C:\Users\ALEXIS\source\repos\SistemaWeb-Ventas\CapaNegocio\obj\Debug\CapaNegocio
 C:\Users\ALEXIS\source\repos\SistemaWeb-Ventas\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\ALEXIS\source\repos\SistemaWeb-Ventas\CapaNegocio\obj\Debug\CapaNegocio.xml
 C:\Users\ALEXIS\source\repos\SistemaWeb-Ventas\CapaNegocio\obj\Debug\CapaNegocio.pdb
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaNegocio.dll
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaNegocio.pdb
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaNegocio.xml
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaDatos.dll
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaEntidad.dll
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaDatos.pdb
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaDatos.xml
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaEntidad.pdb
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaEntidad.xml
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.vbprojAssemblyReference.cache
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.Resources.resources
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.vbproj.GenerateResource.cache
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.vbproj.CoreCompileInputs.cache
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.vbproj.CopyComplete
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.dll
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.xml
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.pdb
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaNegocio\bin\Debug\CapaNegocio.dll
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaNegocio\bin\Debug\CapaNegocio.pdb
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\CapaNegocio\bin\Debug\CapaNegocio.xml
@@ -66,3 +49,20 @@ C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaNegocio\obj\Debug\Cap
 C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaNegocio\obj\Debug\CapaNegocio.xml
 C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaNegocio.dll
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaNegocio.pdb
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaNegocio.xml
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaDatos.dll
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaEntidad.dll
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaDatos.pdb
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaDatos.xml
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaEntidad.pdb
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\bin\Debug\CapaEntidad.xml
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.vbprojAssemblyReference.cache
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.Resources.resources
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.vbproj.GenerateResource.cache
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.vbproj.CoreCompileInputs.cache
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.vbproj.CopyComplete
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.dll
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.xml
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\CapaNegocio\obj\Debug\CapaNegocio.pdb
