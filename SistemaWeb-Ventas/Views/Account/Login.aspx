@@ -10,7 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<<<<<<< HEAD
     <title>Login </title>
+=======
+    <title>Sistemas Ventas</title>
+>>>>>>> 82df7d6d269a162e60ef4ce5eea69cf68a208ff7
 
     <!-- Bootstrap -->
     <link href="../../Scripts/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />

@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class frmVenta
+Partial Public Class frmDetalleVenta
 
     '''<summary>
     '''Control DropDownList1.
@@ -23,6 +23,15 @@ Partial Public Class frmVenta
     Protected WithEvents DropDownList1 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
+    '''Control DropDownList3.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents DropDownList3 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''Control txtUsuario.
     '''</summary>
     '''<remarks>
@@ -30,15 +39,6 @@ Partial Public Class frmVenta
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtUsuario As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control DropDownList2.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents DropDownList2 As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Control txtNumComprobante.
@@ -57,15 +57,6 @@ Partial Public Class frmVenta
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtImpuesto As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''Control txtTotIngreso.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents txtTotIngreso As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control btnNuevo.
@@ -95,11 +86,11 @@ Partial Public Class frmVenta
     Protected WithEvents btnShowFormVen As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control tblVenta.
+    '''Control tblDetVenta.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents tblVenta As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents tblDetVenta As Global.System.Web.UI.WebControls.GridView
 End Class
