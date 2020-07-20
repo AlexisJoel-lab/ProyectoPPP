@@ -157,6 +157,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\logo.jpg" />
+    <Content Include="Views\Forms\frmDetalleVenta.aspx" />
+    <Content Include="Views\Forms\frmProveedor.aspx" />
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Scripts\build\css\custom.css" />
     <Content Include="Scripts\build\css\custom.min.css" />
@@ -3960,6 +3962,20 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Views\Forms\frmDetalleVenta.aspx.designer.vb">
+      <DependentUpon>frmDetalleVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\frmDetalleVenta.aspx.vb">
+      <DependentUpon>frmDetalleVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\frmProveedor.aspx.designer.vb">
+      <DependentUpon>frmProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\frmProveedor.aspx.vb">
+      <DependentUpon>frmProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Views\Home\About.aspx.designer.vb">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
