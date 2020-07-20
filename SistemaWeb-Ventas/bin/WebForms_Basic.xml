@@ -118,90 +118,63 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProveedor._txtNombre">
+<member name="F:SistemaWeb_Ventas.frmProveedor._txtDatos">
 <summary>
-Control txtNombre.
+Control txtDatos.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProveedor._txtApePaterno">
+<member name="F:SistemaWeb_Ventas.frmProveedor._txtruc">
 <summary>
-Control txtApePaterno.
+Control txtruc.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProveedor._txtApeMaterno">
+<member name="F:SistemaWeb_Ventas.frmProveedor._txtrepresentante">
 <summary>
-Control txtApeMaterno.
+Control txtrepresentante.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProveedor._txtDNI">
+<member name="F:SistemaWeb_Ventas.frmProveedor._txttelefono">
 <summary>
-Control txtDNI.
+Control txttelefono.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProveedor._rbtMales">
+<member name="F:SistemaWeb_Ventas.frmProveedor._Textdireccion">
 <summary>
-Control rbtMales.
+Control Textdireccion.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProveedor._rbtFemale">
+<member name="F:SistemaWeb_Ventas.frmProveedor._Textemail">
 <summary>
-Control rbtFemale.
+Control Textemail.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProveedor._txtTelefono">
+<member name="F:SistemaWeb_Ventas.frmProveedor._DropDownList1">
 <summary>
-Control txtTelefono.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SistemaWeb_Ventas.frmProveedor._txtDireccion">
-<summary>
-Control txtDireccion.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SistemaWeb_Ventas.frmProveedor._txtEmail">
-<summary>
-Control txtEmail.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SistemaWeb_Ventas.frmProveedor._cbEstado">
-<summary>
-Control cbEstado.
+Control DropDownList1.
 </summary>
 <remarks>
 Campo generado automáticamente.

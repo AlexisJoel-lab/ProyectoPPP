@@ -10,11 +10,11 @@
                 </div>
             </div>
 
-            <%--<div class="clearfix"></div>--%>
+            <div class="clearfix"></div>
             <div class="row">
                 <div class="col-md-12 col-sm-12  ">
-                             <div class="clearfix"></div>
-   <div class="x_panel">
+                        <div class="clearfix"></div>
+                        <div class="x_panel">
                         <div class="x_title">
                             <h2>Mantenimiento de Proveedor</h2>
                             <ul class="nav navbar-right panel_toolbox">
@@ -25,8 +25,11 @@
                         </div>
                         <div class="x_content">
                             <%--<form class="form-horizontal form-label-left" method="post" action="#" runat="server">--%>
+                           <div class="row">
+                                <div class="col-md-6">
+
                             <div class="field item form-group">
-                                <label class="col-form-label col-md-3 col-sm-3  label-align">
+                                 <label class="col-form-label col-md-3 col-sm-3  label-align">
                                     Datos<span
                                         class="required">*</span></label>
                                 <div class="col-md-6 col-sm-6">
@@ -85,10 +88,10 @@
                                     <div class="col-md-6 offset-md-3">
                                         <asp:Button ID="btnNuevo" runat="server" Text="Agregar" TabIndex="10" CssClass="btn btn-primary" />
                                         <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" TabIndex="11" CssClass="btn btn-danger" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <%--</form>--%>
                         </div>
                     </div>
                 </div>
@@ -109,6 +112,12 @@
                             <asp:GridView ID="tblCliente" runat="server" CssClass="table" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" ShowHeaderWhenEmpty="True">
                                 <AlternatingRowStyle BackColor="#CCCCCC" />
                                 <Columns>
+
+
+
+
+
+
                                     <%--<asp:TemplateField HeaderText="ID">
                                         <ItemTemplate>
                                             <asp:Label ID="lblID" runat="server" Text='<% # Eval("ID_CLIENTE")%>'></asp:Label>
