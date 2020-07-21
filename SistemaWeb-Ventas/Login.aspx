@@ -1,122 +1,49 @@
-﻿<%@ Page Language="vb" AutoEventWireup="true" CodeBehind="Login.aspx.vb" Inherits="SistemaWeb_Ventas.Login1" ClientIDMode="Static"%>
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Login.aspx.vb" Inherits="SistemaWeb_Ventas.Login" %>
 
-<!DOCTYPE html>
-
-<html lang="es">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login </title>
-
-    <!-- Bootstrap -->
-    <link href="Scripts/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Font Awesome -->
-    <link href="Scripts/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="Scripts/vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- Animate.css -->
-    <link href="Scripts/vendors/animate.css/animate.min.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="Scripts/build/css/custom.min.css" rel="stylesheet" />
-
-     <style>
-        #btnIngresar{
-            margin: 0%;
-            width: 100%;
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <style type="text/css">
+        body
+        {
+            margin: 20pt !important;
         }
-
-        /*#btnReset {
-            margin-right: 0px;
-            margin-left: 0px;
-        }*/
     </style>
 </head>
 
-<body class="login">
-    <div>
-        <a class="hiddenanchor" id="signup"></a>
-        <a class="hiddenanchor" id="signin"></a>
 
-        <%--<div class="container-fluid">
-            <asp:Image ID="imgLogo" runat="server" ImageUrl="~/images/logo.jpg" ImageAlign="Top" />
-        </div>--%>
-        <div class="login_wrapper">
-            <div class="animate form login_form">
-                <section class="login_content">
-                    <form id="form1" runat="server">
-                        <h1>Iniciar Sesión</h1>
-                        <asp:Login ID="LoginUser" runat="server" EnableViewState="false" OnAuthenticate="LoginUser_Authenticate" Width="100%">
-                            <LayoutTemplate>
-                                <div>
-                                    <asp:TextBox ID="UserName" runat="server" CssClass="form-control" placeholder="Usuario" required="" TabIndex="1"></asp:TextBox>
-                                </div>
-                                <div>
-                                    <asp:TextBox ID="Password" runat="server" CssClass="form-control" placeholder="Contraseña" required="" TabIndex="2" TextMode="Password"></asp:TextBox>
-                                </div>
-                                <div class="form-group">
-                                    <asp:Button ID="btnIngresar" CommandName="Login" runat="server" Text="Inicar Sesión" CssClass="btn btn-primary" TabIndex="3" />
-                                </div>
-                            </LayoutTemplate>
-                        </asp:Login>
-                        <div class="clearfix"></div>
+<body>
+    <script type="text/javascript" src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.3.min.js'></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js'></script>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css'
+        media="screen" />
 
-                        <div class="separator">
-                            <%--<p class="change_link">New to site?
-                                  <a href="#signup" class="to_register"> Create Account </a>
-                                </p>--%>
-                            <div class="clearfix"></div>
-                            <br />
-
-                            <div>
-                                <h1><i class="fa fa-shopping-cart"></i>   Sistema Ventas</h1>
-                                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
-                            </div>
-                        </div>
-                    </form>
-                </section>
-            </div>
-
-            <div id="register" class="animate form registration_form">
-                <section class="login_content">
-                    <form>
-                        <h1>Crear Cuenta</h1>
-                        <div>
-                            <input type="text" class="form-control" placeholder="Username" required="" />
-                        </div>
-                        <div>
-                            <input type="email" class="form-control" placeholder="Email" required="" />
-                        </div>
-                        <div>
-                            <input type="password" class="form-control" placeholder="Password" required="" />
-                        </div>
-                        <div>
-                            <button id="btnRegister" class="btn btn-primary submit">Enviar</button>
-                        </div>
-
-                        <div class="clearfix"></div>
-
-                        <div class="separator">
-                            <p class="change_link">
-                                ¿Ya eres usuario?
-                                <a href="#signin" class="to_register">Iniciar Sesión </a>
-                            </p>
-
-                            <div class="clearfix"></div>
-                            <br />
-
-                            <div>
-                                <h1><i class="fa fa-shopping-cart"></i>Sistema ventas</h1>
-                                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
-                            </div>
-                        </div>
-                    </form>
-                </section>
-            </div>
+    <form id="form1" runat="server">
+    <div style="max-width: 400px;">
+        <h2 class="form-signin-heading">
+            SISTEMA DE VENTAS</h2>
+        <label for="txtUsername">
+            Usuario</label>
+        <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Enter Username"
+            required />
+        <br />
+        <label for="txtPassword">
+            Contraseña</label>
+        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control"
+            placeholder="Enter Password" required />
+        <div class="checkbox">
+            <asp:CheckBox ID="chkRememberMe" Text="Recuérdame" runat="server" />
+        </div>
+        <asp:Button ID="btnLogin" Text="Login" runat="server" OnClick="ValidateUser" Class="btn btn-primary" />
+        <br />
+        <br />
+        <div id="dvMessage" runat="server" visible="false" class="alert alert-danger">
+            <strong>Error!</strong>
+            <asp:Label ID="lblMessage" runat="server" />
         </div>
     </div>
+    </form>
 </body>
 </html>
+
