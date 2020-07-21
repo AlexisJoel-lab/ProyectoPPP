@@ -2,9 +2,9 @@
 #Region "CAMPOS"
     Private _ID_USUARIO As Integer
     Private _CODIGO As String
-    Private _FK_ID_ROL As String
+    Private _FK_ID_ROL As CE_Rol
     Private _USUARIO As String
-    Private _CONTRASEÑA As String
+    Private _CONTRASENIA As String
     Private _NOMBRE As String
     Private _APE_PATERNO As String
     Private _APE_MATERNO As String
@@ -34,11 +34,11 @@
         End Set
     End Property
 
-    Public Property FK_ID_ROL As String
+    Public Property FK_ID_ROL As CE_Rol
         Get
             Return _FK_ID_ROL
         End Get
-        Set(value As String)
+        Set(value As CE_Rol)
             _FK_ID_ROL = value
         End Set
     End Property
@@ -61,12 +61,12 @@
         End Set
     End Property
 
-    Public Property CONTRASEÑA As String
+    Public Property CONTRASENIA As String
         Get
-            Return _CONTRASEÑA
+            Return _CONTRASENIA
         End Get
         Set(value As String)
-            _CONTRASEÑA = value
+            _CONTRASENIA = value
         End Set
     End Property
 
@@ -235,7 +235,7 @@
     Public Sub New()
     End Sub
 
-    Public Sub New(ID_USUARIO As Integer, CODIGO As String, FK_ID_ROL As String, USUARIO As String, CONTRASEÑA As String,
+    Public Sub New(ID_USUARIO As Integer, CODIGO As String, FK_ID_ROL As CE_Rol, USUARIO As String, CONTRASENIA As String,
                    NOMBRE As String, APE_PATERNO As String, APE_MATERNO As String, DNI As String,
                    FECHA_NAC As Date, GENERO As String, EMAIL As String, DIRECCION As String,
                    DEPARTAMENTO As String, PROVINCIA As String, DISTRITO As String, TELEFONO As String,
@@ -245,7 +245,7 @@
         _CODIGO = CODIGO
         _FK_ID_ROL = FK_ID_ROL
         _USUARIO = USUARIO
-        _CONTRASEÑA = CONTRASEÑA
+        _CONTRASENIA = CONTRASENIA
         _NOMBRE = NOMBRE
         _APE_PATERNO = APE_PATERNO
         _APE_MATERNO = APE_MATERNO

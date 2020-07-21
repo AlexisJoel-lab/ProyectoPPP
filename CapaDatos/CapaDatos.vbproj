@@ -73,6 +73,7 @@
     <Compile Include="CD_PedidoCompra.vb" />
     <Compile Include="CD_Producto.vb" />
     <Compile Include="CD_Provedor.vb" />
+    <Compile Include="CD_Rol.vb" />
     <Compile Include="CD_Usuario.vb" />
     <Compile Include="CD_Venta.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

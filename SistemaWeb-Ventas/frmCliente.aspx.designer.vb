@@ -122,13 +122,13 @@ Partial Public Class frmCliente
     Protected WithEvents btnCancelar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''Control btnShowFormCli.
+    '''Control btnShowForm.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnShowFormCli As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents btnShowForm As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control tblCliente.

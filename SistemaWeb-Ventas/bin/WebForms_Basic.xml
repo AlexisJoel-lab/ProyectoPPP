@@ -37,27 +37,115 @@ SistemaWeb-Ventas
  Devuelve el objeto de registro Asp.
  </summary>
 </member>
-<member name="F:SistemaWeb_Ventas.Login1._txtUser">
+<member name="T:SistemaWeb_Ventas.My.Resources.Resources">
 <summary>
-Control txtUser.
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:SistemaWeb_Ventas.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:SistemaWeb_Ventas.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="F:SistemaWeb_Ventas.frmDetalleVenta._DropDownList1">
+<summary>
+Control DropDownList1.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.Login1._txtPass">
+<member name="F:SistemaWeb_Ventas.frmDetalleVenta._DropDownList3">
 <summary>
-Control txtPass.
+Control DropDownList3.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.Login1._btnLogin">
+<member name="F:SistemaWeb_Ventas.frmDetalleVenta._txtUsuario">
 <summary>
-Control btnLogin.
+Control txtUsuario.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmDetalleVenta._txtNumComprobante">
+<summary>
+Control txtNumComprobante.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmDetalleVenta._txtImpuesto">
+<summary>
+Control txtImpuesto.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmDetalleVenta._btnNuevo">
+<summary>
+Control btnNuevo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmDetalleVenta._btnCancelar">
+<summary>
+Control btnCancelar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmDetalleVenta._btnShowFormVen">
+<summary>
+Control btnShowFormVen.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmDetalleVenta._tblDetVenta">
+<summary>
+Control tblDetVenta.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.Login1._form1">
+<summary>
+Control form1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.Login1._LoginUser">
+<summary>
+Control LoginUser.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -217,9 +305,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmCliente._btnShowFormCli">
+<member name="F:SistemaWeb_Ventas.frmCliente._btnShowForm">
 <summary>
-Control btnShowFormCli.
+Control btnShowForm.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -235,90 +323,54 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmIngreso._txtNombre">
+<member name="F:SistemaWeb_Ventas.frmIngreso._DropDownList1">
 <summary>
-Control txtNombre.
+Control DropDownList1.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmIngreso._txtApePaterno">
+<member name="F:SistemaWeb_Ventas.frmIngreso._txtUsuario">
 <summary>
-Control txtApePaterno.
+Control txtUsuario.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmIngreso._txtApeMaterno">
+<member name="F:SistemaWeb_Ventas.frmIngreso._DropDownList2">
 <summary>
-Control txtApeMaterno.
+Control DropDownList2.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmIngreso._txtDNI">
+<member name="F:SistemaWeb_Ventas.frmIngreso._txtNumComprobante">
 <summary>
-Control txtDNI.
+Control txtNumComprobante.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmIngreso._rbtMales">
+<member name="F:SistemaWeb_Ventas.frmIngreso._txtImpuesto">
 <summary>
-Control rbtMales.
+Control txtImpuesto.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmIngreso._rbtFemale">
+<member name="F:SistemaWeb_Ventas.frmIngreso._txtTotIngreso">
 <summary>
-Control rbtFemale.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SistemaWeb_Ventas.frmIngreso._txtTelefono">
-<summary>
-Control txtTelefono.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SistemaWeb_Ventas.frmIngreso._txtDireccion">
-<summary>
-Control txtDireccion.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SistemaWeb_Ventas.frmIngreso._txtEmail">
-<summary>
-Control txtEmail.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:SistemaWeb_Ventas.frmIngreso._cbEstado">
-<summary>
-Control cbEstado.
+Control txtTotIngreso.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -343,18 +395,18 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmIngreso._btnShowFormCli">
+<member name="F:SistemaWeb_Ventas.frmIngreso._btnShowFormIng">
 <summary>
-Control btnShowFormCli.
+Control btnShowFormIng.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmIngreso._tblCliente">
+<member name="F:SistemaWeb_Ventas.frmIngreso._tblIngreso">
 <summary>
-Control tblCliente.
+Control tblIngreso.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -406,81 +458,153 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProducto._TextBox1">
+<member name="F:SistemaWeb_Ventas.frmProducto._DropDownList1">
 <summary>
-Control TextBox1.
+Control DropDownList1.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProducto._TextBox2">
+<member name="F:SistemaWeb_Ventas.frmProducto._DropDownList2">
 <summary>
-Control TextBox2.
+Control DropDownList2.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProducto._TextBox3">
+<member name="F:SistemaWeb_Ventas.frmProducto._txtCodigo">
 <summary>
-Control TextBox3.
+Control txtCodigo.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProducto._TextBox4">
+<member name="F:SistemaWeb_Ventas.frmProducto._txtDescripcion">
 <summary>
-Control TextBox4.
+Control txtDescripcion.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProducto._TextBox5">
+<member name="F:SistemaWeb_Ventas.frmProducto._txtPreUnitario">
 <summary>
-Control TextBox5.
+Control txtPreUnitario.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProducto._TextBox6">
+<member name="F:SistemaWeb_Ventas.frmProducto._txtStock">
 <summary>
-Control TextBox6.
+Control txtStock.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmProducto._TextBox7">
+<member name="F:SistemaWeb_Ventas.frmProducto._btnNuevo">
 <summary>
-Control TextBox7.
+Control btnNuevo.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmRol._TextBox1">
+<member name="F:SistemaWeb_Ventas.frmProducto._btnCancelar">
 <summary>
-Control TextBox1.
+Control btnCancelar.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmRol._TextBox2">
+<member name="F:SistemaWeb_Ventas.frmProducto._btnShowFormPro">
 <summary>
-Control TextBox2.
+Control btnShowFormPro.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmProducto._tblProducto">
+<summary>
+Control tblProducto.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmRol._txtDescripcion">
+<summary>
+Control txtDescripcion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmRol._btnAgregar">
+<summary>
+Control btnAgregar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmRol._btnCancelar">
+<summary>
+Control btnCancelar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmRol._btnShowForm">
+<summary>
+Control btnShowForm.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmRol._btnEditar">
+<summary>
+Control btnEditar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmRol._btnElimiar">
+<summary>
+Control btnElimiar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmRol._tblRol">
+<summary>
+Control tblRol.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -496,81 +620,180 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmUsuario._TextBox2">
+<member name="F:SistemaWeb_Ventas.frmUsuario._txtUsuario">
 <summary>
-Control TextBox2.
+Control txtUsuario.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmUsuario._TextBox3">
+<member name="F:SistemaWeb_Ventas.frmUsuario._txtContraseña">
 <summary>
-Control TextBox3.
+Control txtContraseña.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmUsuario._DropDownList2">
+<member name="F:SistemaWeb_Ventas.frmUsuario._TextNombres">
 <summary>
-Control DropDownList2.
+Control TextNombres.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmUsuario._TextBox5">
+<member name="F:SistemaWeb_Ventas.frmUsuario._TextApePaterno">
 <summary>
-Control TextBox5.
+Control TextApePaterno.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmUsuario._TextBox6">
+<member name="F:SistemaWeb_Ventas.frmUsuario._txtApeMaterno">
 <summary>
-Control TextBox6.
+Control txtApeMaterno.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmUsuario._TextBox7">
+<member name="F:SistemaWeb_Ventas.frmUsuario._txtDNI">
 <summary>
-Control TextBox7.
+Control txtDNI.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmUsuario._TextBox8">
+<member name="F:SistemaWeb_Ventas.frmUsuario._TextFecNAc">
 <summary>
-Control TextBox8.
+Control TextFecNAc.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmVenta._TextBox1">
+<member name="F:SistemaWeb_Ventas.frmUsuario._rbtMales">
 <summary>
-Control TextBox1.
+Control rbtMales.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmVenta._TextBox2">
+<member name="F:SistemaWeb_Ventas.frmUsuario._rbtFemale">
 <summary>
-Control TextBox2.
+Control rbtFemale.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmUsuario._TextEmail">
+<summary>
+Control TextEmail.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmUsuario._TextDireccion">
+<summary>
+Control TextDireccion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmUsuario._txtDepartamento">
+<summary>
+Control txtDepartamento.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmUsuario._txtProvincia">
+<summary>
+Control txtProvincia.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmUsuario._TextDistrito">
+<summary>
+Control TextDistrito.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmUsuario._txtTelefono">
+<summary>
+Control txtTelefono.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmUsuario._cbEstado">
+<summary>
+Control cbEstado.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmUsuario._btnNuevo">
+<summary>
+Control btnNuevo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmUsuario._btnCancelar">
+<summary>
+Control btnCancelar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmUsuario._btnShowFormUsu">
+<summary>
+Control btnShowFormUsu.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmUsuario._tblUsuarios">
+<summary>
+Control tblUsuarios.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -586,45 +809,81 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmVenta._TextBox3">
+<member name="F:SistemaWeb_Ventas.frmVenta._txtUsuario">
 <summary>
-Control TextBox3.
+Control txtUsuario.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmVenta._TextBox4">
+<member name="F:SistemaWeb_Ventas.frmVenta._DropDownList2">
 <summary>
-Control TextBox4.
+Control DropDownList2.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmVenta._TextBox5">
+<member name="F:SistemaWeb_Ventas.frmVenta._txtNumComprobante">
 <summary>
-Control TextBox5.
+Control txtNumComprobante.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmVenta._TextBox6">
+<member name="F:SistemaWeb_Ventas.frmVenta._txtImpuesto">
 <summary>
-Control TextBox6.
+Control txtImpuesto.
 </summary>
 <remarks>
 Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:SistemaWeb_Ventas.frmVenta._TextBox7">
+<member name="F:SistemaWeb_Ventas.frmVenta._txtTotIngreso">
 <summary>
-Control TextBox7.
+Control txtTotIngreso.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmVenta._btnNuevo">
+<summary>
+Control btnNuevo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmVenta._btnCancelar">
+<summary>
+Control btnCancelar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmVenta._btnShowFormVen">
+<summary>
+Control btnShowFormVen.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:SistemaWeb_Ventas.frmVenta._tblVenta">
+<summary>
+Control tblVenta.
 </summary>
 <remarks>
 Campo generado automáticamente.

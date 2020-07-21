@@ -3,7 +3,7 @@ Imports CapaEntidad
 Public Class CN_Usuario
     Private objetoCD As New CD_Usuario()
 
-    Public Function Login(user As String, pass As String) As Boolean
+    Public Function Login(user As String, pass As String) As CE_Usuario
         Return objetoCD.Login(user, pass)
     End Function
 

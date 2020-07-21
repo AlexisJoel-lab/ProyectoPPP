@@ -106,8 +106,6 @@ C:\Users\ALEXIS\source\repos\SistemaWeb-Ventas\SistemaWeb-Ventas\obj\Debug\Siste
 C:\Users\ALEXIS\source\repos\SistemaWeb-Ventas\SistemaWeb-Ventas\obj\Debug\WebForms_Basic.xml
 C:\Users\ALEXIS\source\repos\SistemaWeb-Ventas\SistemaWeb-Ventas\obj\Debug\SistemaWeb-Ventas.pdb
 C:\Users\ALEXIS\source\repos\SistemaWeb-Ventas\SistemaWeb-Ventas\bin\FontAwesome.Sharp.dll
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\CapaEntidad.dll
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\CapaNegocio.dll
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\SistemaWeb-Ventas\bin\SistemaWeb-Ventas.dll.config
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\SistemaWeb-Ventas\bin\SistemaWeb-Ventas.dll
 C:\Users\User\Documents\GitHub\ProyectoSistemaVentas\SistemaWeb-Ventas\bin\SistemaWeb-Ventas.pdb
@@ -324,6 +322,8 @@ C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\SistemaWeb-Ventas\obj\Deb
 C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\SistemaWeb-Ventas\obj\Debug\SistemaWeb-Ventas.dll
 C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\SistemaWeb-Ventas\obj\Debug\WebForms_Basic.xml
 C:\Users\JAVCH\Documents\GitHub1\ProyectoSistemaVentas\SistemaWeb-Ventas\obj\Debug\SistemaWeb-Ventas.pdb
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\Newtonsoft.Json.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\SistemaWeb-Ventas.dll.config
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\SistemaWeb-Ventas.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\SistemaWeb-Ventas.pdb
@@ -381,14 +381,14 @@ C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\Antlr3.
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\AspNet.ScriptManager.bootstrap.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\AspNet.ScriptManager.jQuery.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\CapaDatos.dll
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\CapaEntidad.dll
+C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\CapaNegocio.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\FontAwesome.Sharp.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\Microsoft.AspNet.FriendlyUrls.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\Microsoft.ScriptManager.MSAjax.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\Microsoft.ScriptManager.WebForms.dll
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\Newtonsoft.Json.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\System.Web.Helpers.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\System.Web.Mvc.dll
 C:\Users\ALEXIS\source\repos\SistemaWebVentas - VB\SistemaWeb-Ventas\bin\System.Web.Optimization.dll

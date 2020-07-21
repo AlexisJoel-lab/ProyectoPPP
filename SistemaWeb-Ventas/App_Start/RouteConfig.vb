@@ -4,11 +4,11 @@ Imports Microsoft.AspNet.FriendlyUrls
 
 Public Module RouteConfig
     Sub RegisterRoutes(ByVal routes As RouteCollection)
-        Dim settings As FriendlyUrlSettings = New FriendlyUrlSettings() With {
-            .AutoRedirectMode = RedirectMode.Permanent
-        }
+        'Dim settings As FriendlyUrlSettings = New FriendlyUrlSettings() With {
+        '    .AutoRedirectMode = RedirectMode.Permanent
+        '}
 
-        routes.EnableFriendlyUrls(settings)
+        'routes.EnableFriendlyUrls(settings)
 
         routes.IgnoreRoute("{resource}.axd/{*pathInfo}")
 
@@ -18,6 +18,6 @@ Public Module RouteConfig
             defaults:=New With {.action = "Index", .id = UrlParameter.Optional}
         )
 
-        routes.MapPageRoute("Cliente", "Views/Forms/", "~/frmCliente.aspx")
+        'routes.MapPageRoute("Cliente", "Views/Forms/", "~/frmCliente.aspx")
     End Sub
 End Module

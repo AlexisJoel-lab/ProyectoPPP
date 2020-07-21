@@ -34,30 +34,30 @@ Public Class frmCliente
             objetoCN.N_InsertarCli(objetoCE)
             MsgBox("Se guardó correctamente")
 
-            limiarControles()
+            'limiarControles()
 
         Catch ex As Exception
             MsgBox("No se pudo guardar los datos por: " & ex.Message)
         End Try
     End Sub
 
-    Protected Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        limiarControles()
-    End Sub
+    'Protected Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+    '    limiarControles()
+    'End Sub
 
-    Private Sub limiarControles()
-        txtNombre.Text = ""
-        txtApePaterno.Text = ""
-        txtApeMaterno.Text = ""
-        txtDNI.Text = " "
-        rbtMales.Checked = False
-        rbtFemale.Checked = False
-        txtTelefono.Text = ""
-        txtDireccion.Text = ""
-        txtEmail.Text = ""
-        cbEstado.SelectedIndex = 0
-        txtNombre.Focus()
-    End Sub
+    'Private Sub limiarControles()
+    '    txtNombre.Text = ""
+    '    txtApePaterno.Text = ""
+    '    txtApeMaterno.Text = ""
+    '    txtDNI.Text = " "
+    '    rbtMales.Checked = False
+    '    rbtFemale.Checked = False
+    '    txtTelefono.Text = ""
+    '    txtDireccion.Text = ""
+    '    txtEmail.Text = ""
+    '    cbEstado.SelectedIndex = 0
+    '    txtNombre.Focus()
+    'End Sub
     Private Sub cargarTabla()
         tblCliente.DataSource = objetoCN.N_MostrarCli()
         tblCliente.DataBind()

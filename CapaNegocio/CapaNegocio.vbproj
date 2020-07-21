@@ -71,6 +71,7 @@
     <Compile Include="CN_Marca.vb" />
     <Compile Include="CN_PedidoCompra.vb" />
     <Compile Include="CN_Proveedor.vb" />
+    <Compile Include="CN_Rol.vb" />
     <Compile Include="CN_Usuario.vb" />
     <Compile Include="CN_Venta.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
