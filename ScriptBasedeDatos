@@ -105,21 +105,121 @@ CREATE TABLE [dbo].[Rol](
 );
 GO
 --Tabla usuario
+
 CREATE TABLE [dbo].[Usuario](
-	ID_USUARIO integer PRIMARY KEY IDENTITY,
-   FK_ID_ROL integer NOT NULL,
-	FK_ID_PERSONA integer NOT NULL,
-   USUARIO varchar(100) NOT NULL,
-	CONTRASEÑA varbinary NOT NULL,
-   FOTO varbinary(max) NOT NULL,
-	ELIM_LOGICO bit default(1),
-	FECHA_INS datetime NULL,
-	FECHA_UPD datetime NULL,
-	FECHA_DEL datetime NULL,
-	FOREIGN KEY (FK_ID_ROL) REFERENCES Rol (ID_ROL),
-	FOREIGN KEY (FK_ID_PERSONA) REFERENCES Persona (ID_PERSONA)
-);
+	[ID_USUARIO] [int] IDENTITY(1,1) NOT NULL,
+	[ID_PERSONA] [int] NOT NULL,
+	[Username] [nvarchar](20) NOT NULL,
+	[Password] [nvarchar](20) NOT NULL,
+--	[Email] [nvarchar](30) NOT NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[LastLoginDate] [datetime] NULL,
+ CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED 
+(
+	[ID_USUARIO] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
 GO
+
+
+CREATE PROCEDURE [dbo].[Insert_User]
+	@ID_PERSONA int,
+	@Username NVARCHAR(20),
+	@Password NVARCHAR(20)
+--	@Email NVARCHAR(30)
+AS
+BEGIN
+	SET NOCOUNT ON;
+	IF EXISTS(SELECT ID_USUARIO FROM Usuario WHERE Username = @Username)
+	BEGIN
+		SELECT -1 -- Username exists.
+	END
+	ELSE IF EXISTS(SELECT ID_USUARIO FROM Usuario WHERE ID_PERSONA = @ID_PERSONA)
+	BEGIN
+		SELECT -2 -- Person exists.
+	END
+	ELSE
+	BEGIN
+		INSERT INTO [Usuario]
+			   ([ID_PERSONA]
+			   ,[Username]
+			   ,[Password]
+			--   ,[Email]
+			   ,[CreatedDate])
+		VALUES
+			   (@ID_PERSONA
+			   ,@Username
+			   ,@Password
+			--   ,@Email
+			   ,GETDATE())
+		
+		SELECT SCOPE_IDENTITY() -- UserId			   
+     END
+END
+
+GO
+
+
+
+CREATE TABLE [dbo].[UserActivation](
+	[ID_USUARIO] [int] NOT NULL,
+	[ActivationCode] [uniqueidentifier] NOT NULL,
+ CONSTRAINT [PK_UserActivation] PRIMARY KEY CLUSTERED 
+(
+	[ID_USUARIO] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+CREATE  PROCEDURE [dbo].[Validate_User]
+	@Username NVARCHAR(20),
+	@Password NVARCHAR(20)
+AS
+BEGIN
+	SET NOCOUNT ON;
+	DECLARE @UserId INT, @LastLoginDate DATETIME
+	
+	SELECT @UserId = ID_USUARIO, @LastLoginDate = LastLoginDate 
+	FROM Usuario WHERE Username = @Username AND [Password] = @Password
+	
+	IF @UserId IS NOT NULL
+	BEGIN
+		IF NOT EXISTS(SELECT ID_USUARIO FROM UserActivation WHERE ID_USUARIO = @UserId)
+		BEGIN
+			UPDATE Usuario
+			SET LastLoginDate =  GETDATE()
+			WHERE ID_USUARIO = @UserId
+			SELECT @UserId [UserId] -- User Valid
+		END
+		ELSE
+		BEGIN
+			SELECT -2 -- User not activated.
+		END
+	END
+	ELSE
+	BEGIN
+		SELECT -1 -- User invalid.
+	END
+END
+GO
+
+INSERT INTO Persona
+SELECT 'william','santamaria','zeña','16769687','21/04/1963','1','admin@ferrotumi.com','av. panamerica 475','LAMBAYEQUE','LAMBAYEQUE','ILLIMO','950047269','0', GETDATE(),NULL,NULL
+UNION ALL
+SELECT 'martin','arriola','arriola','17653687','18/06/1968','1','user@ferrotumi.com','av. belaunde 3475','LAMBAYEQUE','CHICLAYO','CHICLAYO','926958569','0', GETDATE(),NULL,NULL
+go 
+
+INSERT INTO Usuario
+SELECT '1','admin', 'admin', GETDATE(), NULL
+UNION ALL
+SELECT '2','user', '12345', GETDATE(), NULL
+GO
+--INSERT INTO UserActivation
+--SELECT 2, NEWID()
+
+
+
 --Tabla modulo
 CREATE TABLE [dbo].[Modulo](
 	ID_MODULO integer PRIMARY KEY IDENTITY,
@@ -131,6 +231,7 @@ CREATE TABLE [dbo].[Modulo](
 	FECHA_DEL datetime NULL
 );
 GO
+
 --Tabla operacion
 CREATE TABLE [dbo].[Operacion](
 	ID_OPERACION integer PRIMARY KEY IDENTITY,
@@ -674,69 +775,13 @@ GO
 CREATE PROCEDURE [dbo].[Mostrar_Usuario]
 AS
 	SELECT 
-			ID_USUARIO AS ID,
-			DESCRIPCION AS ROL,
-			CONCAT(NOMBRE,' ',APE_PATERNO,' ',APE_MATERNO) AS PERSONA,
-			USUARIO,
-			CONTRASEÑA,
-			FOTO
-	FROM [dbo].[Usuario],[dbo].[Rol],[dbo].[Persona]
+			[ID_PERSONA]
+			,[Username]
+			,[Password]
+		--   ,[Email]
+			,[CreatedDate]
+	FROM Usuario
 GO
---INSERTAR 
-CREATE PROCEDURE [dbo].[Insertar_Usuario]
-	@FK_ID_ROL int,
-	@FK_ID_PERSONA int,
-	@USUARIO varchar(100),
-	@CONTRASEÑA varbinary,
-	@FOTO varbinary(max) 
 
-AS
-	INSERT INTO [dbo].[Usuario] 
-	(FK_ID_ROL,FK_ID_PERSONA,USUARIO,CONTRASEÑA,FOTO)
-			VALUES (@FK_ID_ROL,
-			@FK_ID_PERSONA,
-			@USUARIO,
-			@CONTRASEÑA,
-			@FOTO)
-GO
---EDITAR
-CREATE PROCEDURE [dbo].[Editar_Usuario]
-	@FK_ID_ROL int,
-	@FK_ID_PERSONA int,
-	@USUARIO varchar(100),
-	@CONTRASEÑA varbinary,
-	@FOTO varbinary(max) ,
-	@ID_USUARIO int
-AS
-	UPDATE [dbo].[Usuario] 
-		SET 
-			FK_ID_ROL=@FK_ID_ROL
-			,FK_ID_PERSONA=@FK_ID_PERSONA
-			,USUARIO=@USUARIO
-			,CONTRASEÑA=@CONTRASEÑA
-			,FOTO=@FOTO
-	WHERE ID_USUARIO=@ID_USUARIO
-GO
---ELIMINAR
-CREATE PROCEDURE [dbo].[Eliminar_Usuario]
-	@ID_USUARIO int
-AS
-	UPDATE [dbo].[Usuario]
-		SET ELIM_LOGICO=0
-			,FECHA_DEL=CURRENT_TIMESTAMP
-		WHERE ID_USUARIO=@ID_USUARIO
-GO
---BUSCAR
-CREATE PROCEDURE [dbo].[Buscar_Usuario]
-	@ID_USUARIO int
-AS
-	SELECT 
-			ID_USUARIO AS ID,
-			DESCRIPCION AS ROL,
-			CONCAT(NOMBRE,' ',APE_PATERNO,' ',APE_MATERNO) AS PERSONA,
-			USUARIO,
-			CONTRASEÑA,
-			FOTO
-		FROM [dbo].[Usuario],[dbo].[Rol],[dbo].[Persona]
-		WHERE ID_USUARIO=@ID_USUARIO
-GO
+--select * from usuario
+
