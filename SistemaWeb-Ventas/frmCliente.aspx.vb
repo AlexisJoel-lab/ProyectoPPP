@@ -16,7 +16,7 @@ Public Class frmCliente
         cargarTabla()
     End Sub
 
-    Protected Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+    Protected Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Try
             objetoCE.NOMBRE = txtNombre.Text
             objetoCE.APE_PATERNO = txtApePaterno.Text
@@ -34,8 +34,8 @@ Public Class frmCliente
             objetoCN.N_InsertarCli(objetoCE)
             MsgBox("Se guardó correctamente")
 
-            'limiarControles()
-
+            limpiarControles()
+            cargarTabla()
         Catch ex As Exception
             MsgBox("No se pudo guardar los datos por: " & ex.Message)
         End Try
@@ -45,19 +45,19 @@ Public Class frmCliente
     '    limiarControles()
     'End Sub
 
-    'Private Sub limiarControles()
-    '    txtNombre.Text = ""
-    '    txtApePaterno.Text = ""
-    '    txtApeMaterno.Text = ""
-    '    txtDNI.Text = " "
-    '    rbtMales.Checked = False
-    '    rbtFemale.Checked = False
-    '    txtTelefono.Text = ""
-    '    txtDireccion.Text = ""
-    '    txtEmail.Text = ""
-    '    cbEstado.SelectedIndex = 0
-    '    txtNombre.Focus()
-    'End Sub
+    Private Sub limpiarControles()
+        txtNombre.Text = ""
+        txtApePaterno.Text = ""
+        txtApeMaterno.Text = ""
+        txtDNI.Text = ""
+        rbtMales.Checked = False
+        rbtFemale.Checked = False
+        txtTelefono.Text = ""
+        txtDireccion.Text = ""
+        txtEmail.Text = ""
+        cbEstado.SelectedIndex = 0
+        txtNombre.Focus()
+    End Sub
     Private Sub cargarTabla()
         tblCliente.DataSource = objetoCN.N_MostrarCli()
         tblCliente.DataBind()
@@ -98,4 +98,6 @@ Public Class frmCliente
             MsgBox(ex.Message)
         End Try
     End Sub
+
+
 End Class

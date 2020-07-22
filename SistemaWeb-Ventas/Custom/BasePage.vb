@@ -48,6 +48,7 @@ Public Class BasePage
 
     Protected Overrides Sub OnInit(e As EventArgs)
         MyBase.OnInit(e)
+        'Response.Redirect("~/Login.aspx")
         If HttpContext.Current.Session IsNot Nothing Then
             If Session.IsNewSession Then
                 Try

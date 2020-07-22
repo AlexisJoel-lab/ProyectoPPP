@@ -108,7 +108,7 @@
 
                                     <div class="form-group row">
                                         <div class="col-md-9 offset-md-5">
-                                            <asp:Button ID="btnNuevo" runat="server" Text="Agregar" TabIndex="10" CssClass="btn btn-primary" />
+                                            <asp:Button ID="btnAgregar" runat="server" Text="Agregar" TabIndex="10" CssClass="btn btn-primary" />
                                             <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" TabIndex="11" CssClass="btn btn-danger" />
                                         </div>
                                     </div>
@@ -131,6 +131,7 @@
                         </div>
                         <div class="x_content">
                             <asp:Button ID="btnShowForm" runat="server" Height="36px" Text="Nuevo Cliente" TabIndex="7" CssClass="btn btn-primary" /><br />
+                            
                             <asp:GridView ID="tblCliente" runat="server" CssClass="table table-striped table-bordered dt-responsive nowrap" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" ShowHeaderWhenEmpty="True">
                                 <AlternatingRowStyle BackColor="#CCCCCC" />
                                 <Columns>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Rol" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="frmRol.aspx.vb" Inherits="SistemaWeb_Ventas.frmRol" ClientIDMode="Static"%>
+﻿<%@ Page Title="Rol" Language="vb" AutoEventWireup="false" MasterPageFile="~/Site.Master" CodeBehind="frmRol.aspx.vb" Inherits="SistemaWeb_Ventas.frmRol" ClientIDMode="Static" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <!-- page content -->
@@ -33,14 +33,14 @@
                                     <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control" TabIndex="1" required="required"></asp:TextBox>
                                 </div>
                             </div>
-                            <div class="ln_solid">
-                                <div class="form-group">
-                                    <div class="col-md-6 offset-md-3">
-                                        <asp:Button ID="btnAgregar" runat="server" Text="Agregar" TabIndex="2" CssClass="btn btn-primary" />
-                                        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" TabIndex="3" CssClass="btn btn-danger" />
-                                    </div>
+                            <div class="ln_solid"></div>
+                            <div class="form-group">
+                                <div class="col-md-6 offset-md-3">
+                                    <asp:Button ID="btnAgregar" runat="server" Text="Agregar" TabIndex="2" CssClass="btn btn-primary" />
+                                    <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" TabIndex="3" CssClass="btn btn-danger" />
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -56,11 +56,11 @@
                             </ul>
                             <div class="clearfix"></div>
                         </div>
-                        <div class="x_content">                            
+                        <div class="x_content">
                             <asp:Button ID="btnShowForm" runat="server" Height="36px" Text="Nuevo Rol" TabIndex="4" CssClass="btn btn-primary" />
                             <asp:Button ID="btnEditar" runat="server" Height="36px" Text="Editar" TabIndex="5" CssClass="btn btn-info" />
                             <asp:Button ID="btnElimiar" runat="server" Height="36px" Text="Eliminar" TabIndex="6" CssClass="btn btn-danger" />
-                            
+
                             <asp:GridView ID="tblRol" runat="server" CssClass="table table-striped table-bordered dt-responsive nowrap" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" ShowHeaderWhenEmpty="True">
                                 <AlternatingRowStyle BackColor="#CCCCCC" />
                                 <Columns>

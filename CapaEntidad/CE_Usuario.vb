@@ -2,7 +2,8 @@
 #Region "CAMPOS"
     Private _ID_USUARIO As Integer
     Private _CODIGO As String
-    Private _FK_ID_ROL As CE_Rol
+    'Private _FK_ID_ROL As CE_Rol
+    Private _FK_ID_ROL As String
     Private _USUARIO As String
     Private _CONTRASENIA As String
     Private _NOMBRE As String
@@ -34,11 +35,11 @@
         End Set
     End Property
 
-    Public Property FK_ID_ROL As CE_Rol
+    Public Property FK_ID_ROL As String
         Get
             Return _FK_ID_ROL
         End Get
-        Set(value As CE_Rol)
+        Set(value As String)
             _FK_ID_ROL = value
         End Set
     End Property
@@ -235,7 +236,7 @@
     Public Sub New()
     End Sub
 
-    Public Sub New(ID_USUARIO As Integer, CODIGO As String, FK_ID_ROL As CE_Rol, USUARIO As String, CONTRASENIA As String,
+    Public Sub New(ID_USUARIO As Integer, CODIGO As String, FK_ID_ROL As String, USUARIO As String, CONTRASENIA As String,
                    NOMBRE As String, APE_PATERNO As String, APE_MATERNO As String, DNI As String,
                    FECHA_NAC As Date, GENERO As String, EMAIL As String, DIRECCION As String,
                    DEPARTAMENTO As String, PROVINCIA As String, DISTRITO As String, TELEFONO As String,

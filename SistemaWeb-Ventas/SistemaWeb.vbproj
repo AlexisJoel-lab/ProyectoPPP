@@ -156,9 +156,22 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="frmCategoria.aspx" />
+    <Content Include="frmCliente.aspx" />
+    <Content Include="frmDetalleVenta.aspx" />
+    <Content Include="frmIngreso.aspx" />
+    <Content Include="frmMarca.aspx" />
+    <Content Include="frmProducto.aspx" />
+    <Content Include="frmRol.aspx" />
+    <Content Include="frmUsuario.aspx" />
+    <Content Include="frmVenta.aspx" />
     <Content Include="images\logo.jpg" />
-    <Content Include="Views\Forms\frmDetalleVenta.aspx" />
-    <Content Include="Views\Forms\frmProveedor.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Scripts\mostrarTable.js" />
+    <Content Include="Views\Forms\FrmCompra.aspx" />
+    <Content Include="Views\Forms\frmProveedor.aspx">
+      <BrowseToURL>~/Views/Forms/frmProveedor</BrowseToURL>
+    </Content>
     <Content Include="Views\Home\About.aspx" />
     <Content Include="Scripts\build\css\custom.css" />
     <Content Include="Scripts\build\css\custom.min.css" />
@@ -180,33 +193,6 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Views\Account\Login.aspx">
-      <BrowseToURL>~/Views/Account/Login</BrowseToURL>
-    </Content>
-    <Content Include="Views\Forms\frmCategoria.aspx">
-      <BrowseToURL>~/Views/Forms/frmCategoria</BrowseToURL>
-    </Content>
-    <Content Include="Views\Forms\frmCliente.aspx">
-      <BrowseToURL>~/Views/Forms/frmCliente</BrowseToURL>
-    </Content>
-    <Content Include="Views\Forms\frmIngreso.aspx">
-      <BrowseToURL>~/Views/Forms/frmIngreso</BrowseToURL>
-    </Content>
-    <Content Include="Views\Forms\frmMarca.aspx">
-      <BrowseToURL>~/Views/Forms/frmMarca</BrowseToURL>
-    </Content>
-    <Content Include="Views\Forms\frmProducto.aspx">
-      <BrowseToURL>~/Views/Forms/frmProducto</BrowseToURL>
-    </Content>
-    <Content Include="Views\Forms\frmRol.aspx">
-      <BrowseToURL>~/Views/Forms/frmRol</BrowseToURL>
-    </Content>
-    <Content Include="Views\Forms\frmUsuario.aspx">
-      <BrowseToURL>~/Views/Forms/frmUsuario</BrowseToURL>
-    </Content>
-    <Content Include="Views\Forms\frmVenta.aspx">
-      <BrowseToURL>~/Views/Forms/frmVenta</BrowseToURL>
-    </Content>
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -3962,11 +3948,86 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
-    <Compile Include="Views\Forms\frmDetalleVenta.aspx.designer.vb">
+    <Compile Include="Custom\BasePage.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Custom\CustomMembershipProvider.vb" />
+    <Compile Include="Custom\SessionManager.vb" />
+    <Compile Include="frmCategoria.aspx.designer.vb">
+      <DependentUpon>frmCategoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategoria.aspx.vb">
+      <DependentUpon>frmCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCliente.aspx.designer.vb">
+      <DependentUpon>frmCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCliente.aspx.vb">
+      <DependentUpon>frmCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmDetalleVenta.aspx.designer.vb">
       <DependentUpon>frmDetalleVenta.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Views\Forms\frmDetalleVenta.aspx.vb">
+    <Compile Include="frmDetalleVenta.aspx.vb">
       <DependentUpon>frmDetalleVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmIngreso.aspx.designer.vb">
+      <DependentUpon>frmIngreso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmIngreso.aspx.vb">
+      <DependentUpon>frmIngreso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmMarca.aspx.designer.vb">
+      <DependentUpon>frmMarca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmMarca.aspx.vb">
+      <DependentUpon>frmMarca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmProducto.aspx.designer.vb">
+      <DependentUpon>frmProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmProducto.aspx.vb">
+      <DependentUpon>frmProducto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmRol.aspx.designer.vb">
+      <DependentUpon>frmRol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmRol.aspx.vb">
+      <DependentUpon>frmRol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmUsuario.aspx.designer.vb">
+      <DependentUpon>frmUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.aspx.vb">
+      <DependentUpon>frmUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmVenta.aspx.designer.vb">
+      <DependentUpon>frmVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmVenta.aspx.vb">
+      <DependentUpon>frmVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Forms\FrmCompra.aspx.designer.vb">
+      <DependentUpon>FrmCompra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\FrmCompra.aspx.vb">
+      <DependentUpon>FrmCompra.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Forms\frmProveedor.aspx.designer.vb">
@@ -3996,69 +4057,6 @@
     </Compile>
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Account\Login.aspx.designer.vb">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Account\Login.aspx.vb">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Views\Forms\frmCategoria.aspx.designer.vb">
-      <DependentUpon>frmCategoria.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Forms\frmCategoria.aspx.vb">
-      <DependentUpon>frmCategoria.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Views\Forms\frmCliente.aspx.designer.vb">
-      <DependentUpon>frmCliente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Forms\frmCliente.aspx.vb">
-      <DependentUpon>frmCliente.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Views\Forms\frmIngreso.aspx.designer.vb">
-      <DependentUpon>frmIngreso.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Forms\frmIngreso.aspx.vb">
-      <DependentUpon>frmIngreso.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Views\Forms\frmMarca.aspx.designer.vb">
-      <DependentUpon>frmMarca.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Forms\frmMarca.aspx.vb">
-      <DependentUpon>frmMarca.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Views\Forms\frmProducto.aspx.designer.vb">
-      <DependentUpon>frmProducto.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Forms\frmProducto.aspx.vb">
-      <DependentUpon>frmProducto.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Views\Forms\frmRol.aspx.designer.vb">
-      <DependentUpon>frmRol.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Forms\frmRol.aspx.vb">
-      <DependentUpon>frmRol.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Views\Forms\frmUsuario.aspx.designer.vb">
-      <DependentUpon>frmUsuario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Forms\frmUsuario.aspx.vb">
-      <DependentUpon>frmUsuario.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Views\Forms\frmVenta.aspx.designer.vb">
-      <DependentUpon>frmVenta.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Forms\frmVenta.aspx.vb">
-      <DependentUpon>frmVenta.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
@@ -5177,6 +5175,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Account\" />
     <Folder Include="Views\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
