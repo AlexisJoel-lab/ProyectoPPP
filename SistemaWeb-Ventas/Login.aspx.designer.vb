@@ -1,4 +1,5 @@
 ﻿'------------------------------------------------------------------------------
+''------------------------------------------------------------------------------
 ' <generado automáticamente>
 '     Este código fue generado por una herramienta.
 '
@@ -11,8 +12,17 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class Login1
-
+Partial Public Class Login
+    
+    '''<summary>
+    '''Control Head1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Head1 As Global.System.Web.UI.HtmlControls.HtmlHead
+    
     '''<summary>
     '''Control form1.
     '''</summary>
@@ -21,13 +31,59 @@ Partial Public Class Login1
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
-
+    
     '''<summary>
-    '''Control LoginUser.
+    '''Control txtUsername.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents LoginUser As Global.System.Web.UI.WebControls.Login
+    Protected WithEvents txtUsername As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control txtPassword.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
+    '''Control chkRememberMe.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents chkRememberMe As Global.System.Web.UI.WebControls.CheckBox
+    
+    '''<summary>
+    '''Control btnLogin.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Control dvMessage.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents dvMessage As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    
+    '''<summary>
+    '''Control lblMessage.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblMessage As Global.System.Web.UI.WebControls.Label
 End Class
+
