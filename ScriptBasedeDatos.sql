@@ -127,7 +127,43 @@ GO
 --) ON [PRIMARY]
 
 --GO
+go
 
+CREATE TABLE Proveedor(
+	ID_PROVEEDOR integer PRIMARY KEY IDENTITY(1,1),
+	CODIGO AS ('CL' + RIGHT('0000' + CONVERT(VARCHAR, ID_PROVEEDOR),(4))),
+    DATOS varchar(100) NOT NULL,
+	RUC varchar(11) NOT NULL,
+	REPRESENTANTE varchar(100) NOT NULL,
+	TELEFONO varchar(20) NOT NULL,	
+    DIRECCION varchar(70) NOT NULL,
+	EMAIL varchar(50) NOT NULL,      
+	ESTADO char(1) check(Estado IN('A','I')) NOT NULL,--E: Activo		H:Inactivo
+	ELIM_LOGICO bit default(1),
+	FECHA_INS datetime NULL,
+	FECHA_UPD datetime NULL,
+	FECHA_DEL datetime NULL
+)
+go
+Create Table Pedido_Compra
+(	ID_PEDIDOCOMPRA int identity(1,1) Primary Key,
+	ID_PROVEEDOR int foreign key references Proveedor ,	
+	FECHAPEDIDOCOMPRA datetime not null,
+	ESTADO char(1) check(Estado in('E','A','P')) not null,--E: Entregado A:Anulada P:Pendiente
+	ID_USUARIO int references Usuario,
+	MONTOTOTAL money Check(MONTOTOTAL>=0) not null,
+	MONTOFLETE money Check(MONTOFLETE>=0) null,
+)
+go
+ 
+ Create Table Detalle_Pedido
+(	ID_DETALLEPEDIDO int identity(1,1) primary key,
+	ID_PEDIDOCOMPRA int  foreign key references Pedido_Compra,
+	ID_PRODUCTO INT  references Producto ,
+	PRECIOCOMPRA smallmoney  not null,--Precio de Pedido
+	CANTIDAD int check(Cantidad>=0) not null
+)
+GO
 
 --CREATE PROCEDURE [dbo].[Insert_User]
 --	@ID_PERSONA int,
@@ -784,3 +820,52 @@ AS
 	UPDATE Usuario SET ELIM_LOGICO=0, FECHA_DEL=GETDATE()
 	WHERE ID_USUARIO=@ID_USUARIO
 GO
+/*********************************sp proveedor***********************************/
+INSERT INTO Proveedor(DATOS,RUC,REPRESENTANTE,TELEFONO,DIRECCION,EMAIL,ESTADO,FECHA_INS) 
+VALUES('ROHAN','20601175119','JUNIOR','98877889','AV LOS INCAS 613','junior@gmial.com','A',GETDATE())
+go
+CREATE PROCEDURE ProveedorMostrar
+AS
+    SELECT CODIGO,DATOS,RUC,REPRESENTANTE,TELEFONO,DIRECCION,EMAIL,ESTADO
+	FROM Proveedor
+	WHERE ELIM_LOGICO=1
+GO
+
+--INSERTAR 
+CREATE PROCEDURE ProveedorInsertar
+	@DATOS varchar(100),
+	@RUC varchar(11),
+	@REPRESENTANTE varchar(100) ,
+	@TELEFONO varchar(20) ,	
+    @DIRECCION varchar(70),
+	@EMAIL varchar(50)      
+ --E: Activo		H:Inactivo
+ AS
+	INSERT INTO proveedor (DATOS,RUC,REPRESENTANTE,TELEFONO,DIRECCION,EMAIL,ESTADO,FECHA_INS)
+	VALUES (@DATOS,@RUC,@REPRESENTANTE,@TELEFONO,@DIRECCION,@EMAIL,'A',GETDATE())
+	
+GO
+
+--EDITAR
+CREATE PROCEDURE ProveedorEditar
+	@DATOS varchar(100),
+	@RUC varchar(11),
+	@REPRESENTANTE varchar(100) ,
+	@TELEFONO varchar(20) ,	
+    @DIRECCION varchar(70),
+	@EMAIL varchar(50),      
+	@ESTADO char(1),
+	@ID_PROVEEDOR integer
+AS
+	UPDATE Proveedor SET DATOS=@DATOS,RUC=@RUC,REPRESENTANTE=@REPRESENTANTE,TELEFONO=@TELEFONO,DIRECCION=@DIRECCION,EMAIL=@EMAIL,ESTADO=@ESTADO,FECHA_UPD=GETDATE()
+	WHERE ID_PROVEEDOR=@ID_PROVEEDOR
+GO
+--ELIMINAR
+CREATE PROCEDURE ProveedorEliminar
+	@ID_PROVEEDOR int
+AS
+	UPDATE Proveedor SET ELIM_LOGICO=0,FECHA_DEL=GETDATE() 
+	WHERE ID_PROVEEDOR=@ID_PROVEEDOR
+GO
+
+/*********************************fin sp proveedor***********************************/
