@@ -162,6 +162,7 @@
     <Content Include="frmIngreso.aspx" />
     <Content Include="frmMarca.aspx" />
     <Content Include="frmProducto.aspx" />
+    <Content Include="frmProveedor.aspx" />
     <Content Include="frmRol.aspx" />
     <Content Include="frmUsuario.aspx" />
     <Content Include="frmVenta.aspx" />
@@ -3994,6 +3995,13 @@
     <Compile Include="frmProducto.aspx.vb">
       <DependentUpon>frmProducto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmProveedor.aspx.designer.vb">
+      <DependentUpon>frmProveedor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmProveedor.aspx.vb">
+      <DependentUpon>frmProveedor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="frmRol.aspx.designer.vb">
       <DependentUpon>frmRol.aspx</DependentUpon>

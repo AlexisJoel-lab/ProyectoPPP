@@ -98,7 +98,7 @@
                             <ul class="nav child_menu">
                               <li><a runat="server" href="~/frmCliente.aspx">Clientes</a></li>
                               <li><a runat="server" href="~/frmUsuario.aspx">Usuarios</a></li>
-                              <%--<li><a runat="server" href="~/Views/Forms/frmProveedor.aspx">Proveedores</a></li>--%>
+                              <li><a runat="server" href="~/frmProveedor.aspx">Proveedores</a></li>
                               <%--<li><a runat="server" href="#">Personas</a></li>--%>
                             </ul>
                           </li>
